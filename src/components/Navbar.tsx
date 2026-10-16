@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Logo from "./Logo";
 
 const links = [
   { name: "Services", href: "/#services" },
@@ -25,9 +26,8 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-cream text-ink">
       <div className="flex items-center justify-between h-16 px-5 md:px-10">
-        <Link href="/" className="leading-none text-ink whitespace-nowrap" onClick={() => setOpen(false)} aria-label="Interior Alchemist home">
-          <span className="block font-sans font-light lowercase text-[13px] tracking-[0.14em]">interior</span>
-          <span className="block font-sans font-light uppercase text-[17px] tracking-[0.04em] -mt-0.5">Alchemist</span>
+        <Link href="/" onClick={() => setOpen(false)} aria-label="Interior Alchemist home">
+          <Logo variant="wordmark" className="h-8 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-10">

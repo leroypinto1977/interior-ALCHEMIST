@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import Logo from "./Logo";
 
 export const LOADED_KEY = "ia-loaded";
 
@@ -33,24 +34,17 @@ export default function Preloader() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-[100] bg-cream text-ink flex flex-col items-center justify-center"
+          className="fixed inset-0 z-[100] bg-ink text-cream flex flex-col items-center justify-center"
           exit={{ y: "-100%" }}
           transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
         >
-          <div className="font-serif text-[clamp(3rem,10vw,8rem)] leading-[0.9] text-center">
-            {["Interior", "Alchemist"].map((word, i) => (
-              <span key={word} className="block overflow-hidden">
-                <motion.span
-                  className="block"
-                  initial={{ y: "110%" }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.9, ease, delay: 0.15 + i * 0.15 }}
-                >
-                  {word}
-                </motion.span>
-              </span>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease, delay: 0.15 }}
+          >
+            <Logo variant="full" className="bg-cream w-[clamp(140px,28vw,260px)]" />
+          </motion.div>
           <motion.span
             className="mt-10 h-px w-40 bg-cream origin-left"
             initial={{ scaleX: 0 }}

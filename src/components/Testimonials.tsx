@@ -28,14 +28,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative isolate overflow-hidden bg-sand text-ink py-20 md:py-36 px-6 md:px-10" id="testimonials">
-      <Ornament kind="lines" className="-right-12 top-6 w-56 md:w-72" />
-      <Ornament kind="kaleido" className="left-1/2 bottom-0 w-40 md:w-56" />
+    <section className="relative isolate overflow-hidden bg-oxblood text-cream py-20 md:py-36 px-6 md:px-10" id="testimonials">
+      <Ornament kind="lines" className="bg-cream opacity-10 -right-12 top-6 w-56 md:w-72" />
+      <Ornament kind="kaleido" className="bg-cream opacity-10 left-1/2 bottom-0 w-40 md:w-56" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
-          <div className="flex items-center gap-6 eyebrow text-taupe">
+          <div className="flex items-center gap-6 eyebrow text-cream/70">
             <span>Kind words</span>
-            <span className="flex-1 h-px bg-ink/30" />
+            <span className="flex-1 h-px bg-cream/40" />
             <span>From homeowners</span>
           </div>
         </Reveal>

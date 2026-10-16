@@ -19,37 +19,61 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Stripe from "@/components/Stripe";
 
-// Section order follows the mockup; a tricolour stripe sits between every pair.
-const sections = [
-  Hero,
-  ShowcaseGrid,
-  Statement,
-  About,
-  Problem,
-  DreamOutcome,
-  Services,
-  WhyUs,
-  Projects,
-  Process,
-  Differentiation,
-  Testimonials,
-  VideoFeedback,
-  Trust,
-  Team,
-  FAQ,
-  CTA,
+type Entry = {
+  C: () => JSX.Element;
+  // `lock` pins the section while the next one scrolls over it; `over` is that next section, with rounded top corners.
+  lock?: boolean;
+  over?: boolean;
+};
+
+const sections: Entry[] = [
+  { C: Hero, lock: true },
+  { C: ShowcaseGrid, over: true },
+  { C: Statement },
+  { C: About },
+  { C: Problem, lock: true },
+  { C: DreamOutcome, over: true },
+  { C: Services },
+  { C: WhyUs },
+  { C: Projects },
+  { C: Process },
+  { C: Differentiation },
+  { C: Testimonials, lock: true },
+  { C: VideoFeedback, over: true },
+  { C: Trust },
+  { C: Team },
+  { C: FAQ },
+  { C: CTA },
 ];
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-      {sections.map((Section, i) => (
-        <div key={i}>
-          {i > 0 && <Stripe />}
-          <Section />
-        </div>
-      ))}
+      {sections.map(({ C, lock, over }, i) => {
+        if (lock) {
+          // ponytail: pins from md up only; on phones these sections are taller than the screen and would hide their lower half
+          return (
+            <div key={i} className="md:sticky md:top-0">
+              {i > 0 && <Stripe />}
+              <C />
+            </div>
+          );
+        }
+        if (over) {
+          return (
+            <div key={i} className="relative -mt-8 rounded-t-[2.5rem] md:rounded-t-[3.5rem] overflow-hidden">
+              <C />
+            </div>
+          );
+        }
+        return (
+          <div key={i} className="relative">
+            <Stripe />
+            <C />
+          </div>
+        );
+      })}
       <Stripe />
       <Footer />
     </main>

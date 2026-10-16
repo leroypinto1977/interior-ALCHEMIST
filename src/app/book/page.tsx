@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 const field =
   "w-full bg-blush border border-ink/30 px-4 py-3.5 text-base font-light text-ink placeholder:text-taupe/70 focus:outline-none focus:border-ink transition-colors";
@@ -16,8 +17,8 @@ export default function BookConsultationPage() {
   return (
     <main className="min-h-screen bg-sand text-ink flex flex-col">
       <header className="flex items-center justify-between h-16 px-5 md:px-10 border-b border-ink/20">
-        <Link href="/" className="font-serif text-xl md:text-2xl uppercase tracking-tight">
-          Interior Alchemist
+        <Link href="/" aria-label="Interior Alchemist home">
+          <Logo variant="wordmark" className="h-8 w-auto" />
         </Link>
         <Link href="/" className="eyebrow hover:underline underline-offset-4">
           ← Back home

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "./Logo";
 import Ornament from "./Ornament";
 import Stripe from "./Stripe";
 
@@ -22,8 +23,8 @@ const strip = [
 export default function Footer() {
   return (
     <footer className="relative isolate overflow-hidden bg-sand text-ink">
-      <Ornament kind="lines" className="left-1/2 -translate-x-1/4 bottom-0 w-72 md:w-[26rem] opacity-80" />
-      <Ornament kind="kaleido" className="right-10 bottom-24 w-40 md:w-56" />
+      <Ornament kind="lines" className="left-1/2 -translate-x-1/4 bottom-0 w-72 md:w-[26rem]" />
+      <Ornament kind="mark" className="right-6 bottom-28 w-52 md:w-80" />
 
       <nav className="flex flex-wrap justify-center gap-x-10 gap-y-3 py-8 px-6 eyebrow">
         {links.map((l) => (
@@ -48,6 +49,7 @@ export default function Footer() {
           Alchemist
         </h2>
         <div className="lg:col-span-4 flex flex-col lg:items-end gap-5">
+          <Logo variant="full" className="w-28 md:w-36" />
           <p className="eyebrow leading-loose max-w-xs lg:text-right">
             India’s first conceptual interior design studio. Design and execution under one roof.
           </p>

@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import Ornament from "./Ornament";
+import PhotoStack from "./PhotoStack";
 import { LOADED_KEY } from "./Preloader";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -28,10 +28,11 @@ export default function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-cream text-ink min-h-screen flex flex-col pt-16">
-      <Ornament kind="leaf" className="-left-12 top-20 w-72 md:w-[26rem]" />
-      <Ornament kind="arcs" className="-left-24 bottom-0 w-[20rem] md:w-[30rem]" />
-      <Ornament kind="kaleido" className="-right-20 top-10 w-64 md:w-[24rem]" />
-      <Ornament kind="lines" className="right-10 bottom-16 w-56 md:w-80" />
+      <Ornament kind="leaf" className="-left-10 top-24 w-56 md:w-80" />
+      <Ornament kind="arcs" className="-left-6 bottom-0 w-40 md:w-64" />
+      <Ornament kind="mark" className="right-[8%] top-[38%] w-56 md:w-96" />
+      <Ornament kind="kaleido" className="-right-10 -top-6 w-40 md:w-64" />
+      <Ornament kind="lines" className="right-0 bottom-10 w-64 md:w-[26rem]" />
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 py-16 text-center">
         <h1 className="relative display uppercase text-[clamp(3.6rem,13vw,12rem)]">
@@ -45,23 +46,11 @@ export default function Hero() {
               Alchemist
             </motion.span>
           </span>
-          {/* Polaroid tucked into the second line, as in the mockup */}
-          <motion.span
-            className="absolute left-1/2 top-[84%] w-[clamp(64px,10vw,150px)] aspect-[4/5] -translate-x-1/2 -translate-y-1/2 -rotate-6 bg-blush shadow-[0_30px_60px_-20px_rgba(0,0,0,0.35)]"
-            initial={{ opacity: 0, scale: 0.6, rotate: -14 }}
-            animate={delay === null ? {} : { opacity: 1, scale: 1, rotate: -6 }}
-            transition={{ duration: 0.8, ease, delay: (delay ?? 0) + 0.7 }}
-          >
-            <span className="absolute inset-1.5 overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&q=80"
-                alt="Minimalist lounge, Tokyo"
-                fill
-                sizes="150px"
-                className="object-cover"
-              />
-            </span>
-          </motion.span>
+          {/* Pile of polaroids tucked into the second line; a new one lands every few seconds */}
+          <PhotoStack
+            className="absolute left-1/2 top-[86%] w-[clamp(84px,11vw,170px)] -translate-x-1/2 -translate-y-1/2"
+            delay={(delay ?? 0) + 0.7}
+          />
         </h1>
 
         <motion.div
@@ -80,7 +69,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="px-6 md:px-10 pb-6 flex items-center gap-6 eyebrow">
+      <div className="px-6 md:px-10 pb-14 flex items-center gap-6 eyebrow">
         <span>Concept studio</span>
         <span className="flex-1 h-px bg-ink/40" />
         <span>Based in India</span>
