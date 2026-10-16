@@ -38,7 +38,7 @@ const config = {
         sans: ["var(--font-sans)", "sans-serif"],
         serif: ["var(--font-serif)", "serif"],
         condensed: ["var(--font-condensed)", "sans-serif"],
-        display: ["var(--font-display)", "sans-serif"],
+        display: ["var(--font-sans)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
       },
       keyframes: {
