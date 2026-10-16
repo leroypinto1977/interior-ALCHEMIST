@@ -6,11 +6,11 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const photos = [
-  { src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&q=80", alt: "Minimalist lounge, Tokyo" },
-  { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=500&q=80", alt: "Helicoidal staircase, Milan" },
-  { src: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=500&q=80", alt: "Living room" },
-  { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80", alt: "Modernist villa, Zurich" },
-  { src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500&q=80", alt: "Warm neutral living room" },
+  { src: "/work/living-k2-curved-sofa.webp", alt: "Living room with a curved sofa under ring chandeliers" },
+  { src: "/work/living-heritage-arches.webp", alt: "Living room with arched doorways and brass mirrors" },
+  { src: "/work/living-sage-arch.webp", alt: "Living area with a sage-green arched feature wall" },
+  { src: "/work/living-teal-sofa.webp", alt: "Long living room with a teal sofa and wood-panelled TV wall" },
+  { src: "/work/bedroom-mandala.webp", alt: "Bedroom with a mandala wall motif and floating bed" },
 ];
 
 // Three slots, bottom to top. Each layer is fanned out so its edges show behind the one above.

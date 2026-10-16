@@ -3,27 +3,31 @@ import Link from "next/link";
 import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
+// Real projects from the studio's 3D presentations; homeowners' names are left out.
 const projects = [
   {
-    title: "Modern home interior",
-    description: "A complete overhaul of a classic mid-century home, bringing in modern elements while preserving its original character. Light, airy and functional.",
-    location: "Los Angeles",
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
+    title: "K2 Residence",
+    description: "A double-height living room under ring chandeliers, a teal island kitchen, a bunk-bed kids' room and a lilac guest suite, tied together by white marble floors.",
+    scope: "Full home",
+    year: "3D design",
+    image: "/work/living-k2-staircase.webp",
+    alt: "K2 Residence living room with a floating staircase and indoor garden",
   },
   {
-    title: "Villa summer classic",
-    description: "Mediterranean-inspired villa redesign focused on indoor-outdoor flow: natural stone, warm woods and expansive glass.",
-    location: "Miami",
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+    title: "Heritage modern apartment",
+    description: "Arched doorways, brass-framed mirrors and patterned marble inlays run from the living room through a play area, a rose-red kitchen and a carved-wood pooja room.",
+    scope: "Full home",
+    year: "2026",
+    image: "/work/kitchen-heritage-rose.webp",
+    alt: "Rose-red kitchen with glass-front cabinets",
   },
   {
-    title: "Modern living room",
-    description: "A minimalist approach to a downtown penthouse: custom furniture, integrated lighting and panoramic city views.",
-    location: "New York",
-    year: "2024",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    title: "Sage & blue family home",
+    description: "Sage-green arched feature walls frame the living and dining areas, with a soft-blue modular kitchen and a jali-inspired pooja unit.",
+    scope: "Full home",
+    year: "2025",
+    image: "/work/dining-sage-arch.webp",
+    alt: "Dining area with a sage-green arched wall and terracotta chairs",
   },
 ];
 
@@ -55,7 +59,7 @@ export default function Projects() {
                     {p.title}
                   </h3>
                   <span className="eyebrow text-taupe">
-                    {p.location} · {p.year}
+                    {p.scope} · {p.year}
                   </span>
                   <p className="sm:col-span-2 text-taupe leading-relaxed max-w-xl">{p.description}</p>
                 </li>
@@ -75,7 +79,7 @@ export default function Projects() {
           <div className="w-[260px] md:w-[300px] border border-ink/60 bg-cream p-2.5 space-y-2.5 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.5)]">
             {projects.map((p) => (
               <div key={p.image} className="group relative aspect-[4/5] overflow-hidden">
-                <Image src={p.image} alt={p.title} fill sizes="300px" className="photo" />
+                <Image src={p.image} alt={p.alt} fill sizes="300px" className="photo" />
               </div>
             ))}
           </div>

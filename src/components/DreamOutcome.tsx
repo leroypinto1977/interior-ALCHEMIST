@@ -19,8 +19,8 @@ export default function DreamOutcome() {
           <figure className="polaroid -rotate-3 w-[300px] sm:w-[360px] group">
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=80"
-                alt="Living room with warm neutral finishes"
+                src="/work/dining-cane.webp"
+                alt="Dining area with cane chairs and a botanical mural"
                 fill
                 sizes="360px"
                 className="photo"

@@ -14,10 +14,10 @@ const links = [
 ];
 
 const strip = [
-  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=80",
-  "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=700&q=80",
-  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80",
-  "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=700&q=80",
+  { src: "/work/exterior-circle-window.webp", alt: "Residence exterior with a circular jali window" },
+  { src: "/work/kitchen-blue-island.webp", alt: "Blue modular kitchen with copper-lit shelving" },
+  { src: "/work/bedroom-heritage-guest.webp", alt: "Guest bedroom with a black four-poster bed" },
+  { src: "/work/living-k2-marble-tv-wall.webp", alt: "Living room with a marble TV wall" },
 ];
 
 export default function Footer() {
@@ -34,9 +34,9 @@ export default function Footer() {
       </nav>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 px-2">
-        {strip.map((src) => (
-          <div key={src} className="group relative aspect-[4/3] overflow-hidden">
-            <Image src={src} alt="" fill sizes="25vw" className="photo" />
+        {strip.map((img) => (
+          <div key={img.src} className="group relative aspect-[4/3] overflow-hidden">
+            <Image src={img.src} alt={img.alt} fill sizes="25vw" className="photo" />
           </div>
         ))}
       </div>
