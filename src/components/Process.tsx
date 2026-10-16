@@ -10,7 +10,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="bg-ink text-ivory py-28 md:py-36 px-6 md:px-10" id="process">
+    <section className="bg-ink text-ivory py-20 md:py-36 px-6 md:px-10" id="process">
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="eyebrow text-ivory/60">Our process</p>

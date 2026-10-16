@@ -29,7 +29,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="bg-cream py-28 md:py-36 px-6 md:px-10" id="faq">
+    <section className="bg-cream py-20 md:py-36 px-6 md:px-10" id="faq">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4">
           <Reveal>

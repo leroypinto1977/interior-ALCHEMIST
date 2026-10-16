@@ -58,10 +58,21 @@
   .polaroid {
     @apply bg-blush p-3 pb-10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.5)];
   }
-  /* Photo that is grayscale until hovered */
   .photo {
-    @apply object-cover grayscale-[0.6] transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-[1.04];
+    @apply object-cover;
   }
+}
+
+/* Muted-until-hovered photos only where there is a pointer to hover with; phones get full colour. */
+@media (hover: hover) {
+  .photo {
+    @apply grayscale-[0.6] transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-[1.04];
+  }
+}
+
+.animate-marquee-left,
+.animate-marquee-right {
+  will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -11,7 +11,7 @@ const rows = [
 
 export default function Differentiation() {
   return (
-    <section className="bg-cream py-28 md:py-36 px-6 md:px-10" id="differentiation">
+    <section className="bg-cream py-20 md:py-36 px-6 md:px-10" id="differentiation">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">The difference</p>
@@ -23,7 +23,8 @@ export default function Differentiation() {
         </Reveal>
 
         <Reveal delay={0.2} className="mt-16">
-          <div className="grid grid-cols-[auto_1fr_1fr] md:grid-cols-[1fr_1fr_1fr] gap-x-4 md:gap-x-10 eyebrow border-b border-oxblood pb-4">
+          {/* Three columns from md up; on phones each row stacks: category, then the two answers */}
+          <div className="hidden md:grid grid-cols-3 gap-x-10 eyebrow border-b border-oxblood pb-4">
             <span className="text-taupe">Compare</span>
             <span className="text-taupe">Ordinary firms</span>
             <span className="text-oxblood">Interior Alchemist</span>
@@ -31,11 +32,13 @@ export default function Differentiation() {
           {rows.map((r) => (
             <div
               key={r.category}
-              className="grid grid-cols-[auto_1fr_1fr] md:grid-cols-[1fr_1fr_1fr] gap-x-4 md:gap-x-10 items-baseline py-5 border-b border-oxblood/20"
+              className="grid md:grid-cols-3 gap-y-1.5 md:gap-x-10 md:items-baseline py-5 border-b border-oxblood/20 border-t md:border-t-0 first:border-t-0"
             >
               <span className="eyebrow text-taupe">{r.category}</span>
-              <span className="text-taupe/80 line-through decoration-oxblood/40 text-sm md:text-lg">{r.ordinary}</span>
-              <span className="font-serif text-xl md:text-3xl text-oxblood">{r.alchemist}</span>
+              <span className="text-taupe/80 line-through decoration-oxblood/40 text-base md:text-lg">
+                {r.ordinary}
+              </span>
+              <span className="font-serif text-2xl md:text-3xl text-oxblood">{r.alchemist}</span>
             </div>
           ))}
         </Reveal>

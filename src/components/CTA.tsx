@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function CTA() {
   return (
-    <section className="relative bg-oxblood overflow-hidden py-28 md:py-40 px-6">
+    <section className="relative bg-oxblood overflow-hidden py-20 md:py-40 px-6">
       <Image
         src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=80"
         alt=""

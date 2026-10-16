@@ -11,7 +11,7 @@ const points = [
 
 export default function Trust() {
   return (
-    <section className="bg-blush py-28 md:py-36 px-6 md:px-10" id="trust">
+    <section className="bg-blush py-20 md:py-36 px-6 md:px-10" id="trust">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
         <div className="lg:col-span-6">
           <Reveal>

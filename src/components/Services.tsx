@@ -9,7 +9,7 @@ const benefits = [
 
 export default function Services() {
   return (
-    <section className="bg-oxblood text-cream py-24 md:py-32 px-6 md:px-10" id="services">
+    <section className="bg-oxblood text-cream py-20 md:py-32 px-6 md:px-10" id="services">
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="flex items-center gap-6 eyebrow">

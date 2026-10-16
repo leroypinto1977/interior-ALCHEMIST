@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function Team() {
   return (
-    <section className="bg-cream py-28 md:py-36 px-6" id="team">
+    <section className="bg-cream py-20 md:py-36 px-6" id="team">
       <div className="max-w-3xl mx-auto text-center">
         <Reveal>
           <p className="eyebrow text-taupe">Meet the founder</p>

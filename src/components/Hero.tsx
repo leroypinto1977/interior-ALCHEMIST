@@ -27,21 +27,14 @@ export default function Hero() {
 
   return (
     <section className="relative bg-oxblood text-cream overflow-hidden min-h-screen flex flex-col pt-16">
-      <motion.div
-        className="absolute inset-0"
-        initial={{ scale: 1.12 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 9, ease: "easeOut" }}
-      >
-        <Image
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1800&q=80"
-          alt=""
-          fill
-          priority
-          className="object-cover"
-        />
-      </motion.div>
-      {/* Oxblood tint, kept outside the transformed wrapper so the blend reaches the section background */}
+      <Image
+        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1800&q=80"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+      />
+      {/* Oxblood tint; static layers so the blend is composited once */}
       <div className="absolute inset-0 bg-oxblood mix-blend-multiply" />
       <div className="absolute inset-0 bg-oxblood/40" />
 

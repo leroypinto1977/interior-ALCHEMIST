@@ -25,11 +25,11 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-blush text-oxblood">
       <div className="flex items-center justify-between h-16 px-5 md:px-10">
-        <Link href="/" className="font-serif text-xl md:text-2xl uppercase tracking-tight" onClick={() => setOpen(false)}>
+        <Link href="/" className="font-serif text-xl md:text-2xl uppercase tracking-tight whitespace-nowrap" onClick={() => setOpen(false)}>
           Interior Alchemist
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-10">
           {links.map((l) => (
             <Link key={l.name} href={l.href} className="eyebrow relative py-1 group">
               {l.name}
@@ -42,7 +42,7 @@ export default function Navbar() {
         </nav>
 
         <button
-          className="md:hidden eyebrow"
+          className="lg:hidden eyebrow"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label="Toggle menu"
@@ -58,7 +58,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.35 }}
-            className="md:hidden fixed inset-0 top-16 bg-oxblood text-cream flex flex-col px-6 pt-10"
+            className="lg:hidden fixed inset-0 top-16 bg-oxblood text-cream flex flex-col px-6 pt-10"
           >
             {links.map((l, i) => (
               <motion.div

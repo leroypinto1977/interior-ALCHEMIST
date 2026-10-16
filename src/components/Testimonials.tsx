@@ -27,7 +27,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-oxblood text-cream py-28 md:py-36 px-6 md:px-10" id="testimonials">
+    <section className="bg-oxblood text-cream py-20 md:py-36 px-6 md:px-10" id="testimonials">
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="flex items-center gap-6 eyebrow text-cream/70">

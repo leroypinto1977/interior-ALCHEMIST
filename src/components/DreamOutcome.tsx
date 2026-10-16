@@ -11,7 +11,7 @@ const outcomes = [
 
 export default function DreamOutcome() {
   return (
-    <section className="bg-cream py-28 md:py-36 px-6 md:px-10" id="vision">
+    <section className="bg-cream py-20 md:py-36 px-6 md:px-10" id="vision">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <Reveal className="lg:col-span-5 flex justify-center">
           <figure className="polaroid -rotate-3 w-[300px] sm:w-[360px] group">

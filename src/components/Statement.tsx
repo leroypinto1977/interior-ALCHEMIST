@@ -11,7 +11,7 @@ export default function Statement() {
         fill
         className="object-cover opacity-50"
       />
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-32 md:py-44">
+      <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-44">
         <Reveal>
           <p className="eyebrow text-ivory/80 max-w-xs leading-loose">
             India&apos;s first conceptual interior design studio

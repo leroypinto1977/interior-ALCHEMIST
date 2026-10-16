@@ -3,10 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-const hidden = { opacity: 0, y: 32, clipPath: "inset(0 0 100% 0)" };
-const visible = { opacity: 1, y: 0, clipPath: "inset(0 0 -10% 0)" };
+// Only opacity and transform, so the animation stays on the compositor on phones.
+const hidden = { opacity: 0, y: 28 };
+const visible = { opacity: 1, y: 0 };
 
-// Rises into view out of a mask the first time it scrolls on screen.
+// Rises into view the first time it scrolls on screen.
 // Uses its own IntersectionObserver: framer's whileInView skipped elements here.
 export default function Reveal({
   children,
@@ -44,7 +45,7 @@ export default function Reveal({
       className={className}
       initial={hidden}
       animate={shown ? visible : hidden}
-      transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
