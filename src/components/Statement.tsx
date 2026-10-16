@@ -18,7 +18,7 @@ export default function Statement() {
           </p>
         </Reveal>
         <Reveal delay={0.15}>
-          <h2 className="font-serif text-[clamp(3.2rem,8.5vw,8rem)] leading-[0.9] mt-8 max-w-5xl">
+          <h2 className="headline text-[clamp(3rem,8vw,7.5rem)] mt-8 max-w-5xl">
             Your home should feel like a masterpiece you get to live inside.
           </h2>
         </Reveal>
