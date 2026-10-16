@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("font-sans dark", outfit.variable)}>
-      <body className="antialiased bg-[#0a0a0a] text-white selection:bg-white/20">
+      <body className="antialiased bg-[#0a0a0a] text-ivory selection:bg-ivory/20">
         {children}
       </body>
     </html>

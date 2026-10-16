@@ -38,7 +38,7 @@ function ProofCard({ item, index }: { item: typeof proofItems[0]; index: number 
       onMouseMove={handleMouseMove}
       onTouchStart={handleTouch}
       onTouchMove={handleTouch}
-      className="group relative overflow-hidden bg-gradient-to-b from-[#0f0f0f] to-[#070707] border border-white/[0.03] rounded-2xl p-6 hover:border-[#c5a880]/20 hover:bg-[#121212] transition-colors duration-300 flex flex-col items-center justify-center min-h-[120px] cursor-pointer"
+      className="group relative overflow-hidden bg-gradient-to-b from-[#0f0f0f] to-[#070707] border border-ivory/[0.03] rounded-2xl p-6 hover:border-oxblood-light/20 hover:bg-[#121212] transition-colors duration-300 flex flex-col items-center justify-center min-h-[120px] cursor-pointer"
     >
       {/* Dynamic gold spotlight background effect */}
       <motion.div
@@ -47,7 +47,7 @@ function ProofCard({ item, index }: { item: typeof proofItems[0]; index: number 
           background: useMotionTemplate`
             radial-gradient(
               160px circle at ${mouseX}px ${mouseY}px,
-              rgba(197, 168, 128, 0.03),
+              rgba(196, 122, 122, 0.03),
               transparent 80%
             )
           `,
@@ -61,7 +61,7 @@ function ProofCard({ item, index }: { item: typeof proofItems[0]; index: number 
           background: useMotionTemplate`
             radial-gradient(
               85px circle at ${mouseX}px ${mouseY}px,
-              rgba(197, 168, 128, 0.15),
+              rgba(196, 122, 122, 0.15),
               transparent 80%
             )
           `,
@@ -72,10 +72,10 @@ function ProofCard({ item, index }: { item: typeof proofItems[0]; index: number 
         }}
       />
 
-      <span className="text-2xl md:text-3xl font-semibold mb-2 text-white group-hover:scale-105 group-hover:text-[#c5a880] transition-all duration-300 z-10">
+      <span className="text-2xl md:text-3xl font-semibold mb-2 text-ivory group-hover:scale-105 group-hover:text-oxblood-light transition-all duration-300 z-10">
         {item.value}
       </span>
-      <span className="text-[10px] text-gray-500 uppercase tracking-widest text-center group-hover:text-gray-300 transition-colors duration-300 z-10 font-light">
+      <span className="text-[10px] text-cream/45 uppercase tracking-widest text-center group-hover:text-cream/80 transition-colors duration-300 z-10 font-light">
         {item.label}
       </span>
     </motion.div>
@@ -92,7 +92,7 @@ export default function About() {
         transition={{ duration: 0.6 }}
         className="mb-16"
       >
-        <div className="inline-block px-3 py-1 mb-6 text-xs text-gray-400 border border-gray-800 rounded-full">
+        <div className="inline-block px-3 py-1 mb-6 text-xs text-cream/60 border border-cream/10 rounded-full">
           Social Proof
         </div>
         <h2 className="text-3xl md:text-5xl font-medium leading-tight max-w-4xl mx-auto">

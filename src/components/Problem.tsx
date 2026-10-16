@@ -57,7 +57,7 @@ function PainPointCard({ text, span, index }: { text: string; span: string; inde
       onMouseMove={handleMouseMove}
       onTouchStart={handleTouch}
       onTouchMove={handleTouch}
-      className={`group relative overflow-hidden bg-[#0d0d0d]/60 backdrop-blur-md border border-white/[0.03] rounded-2xl p-5 hover:border-red-900/30 hover:bg-gradient-to-b hover:from-red-950/[0.02] hover:to-transparent transition-colors duration-300 flex items-start gap-4 ${span}`}
+      className={`group relative overflow-hidden bg-[#0d0d0d]/60 backdrop-blur-md border border-ivory/[0.03] rounded-2xl p-5 hover:border-oxblood/30 hover:bg-gradient-to-b hover:from-oxblood/[0.02] hover:to-transparent transition-colors duration-300 flex items-start gap-4 ${span}`}
     >
       {/* Red hover spotlight background */}
       <motion.div
@@ -66,7 +66,7 @@ function PainPointCard({ text, span, index }: { text: string; span: string; inde
           background: useMotionTemplate`
             radial-gradient(
               220px circle at ${mouseX}px ${mouseY}px,
-              rgba(239, 68, 68, 0.03),
+              rgba(196, 122, 122, 0.03),
               transparent 80%
             )
           `,
@@ -80,7 +80,7 @@ function PainPointCard({ text, span, index }: { text: string; span: string; inde
           background: useMotionTemplate`
             radial-gradient(
               80px circle at ${mouseX}px ${mouseY}px,
-              rgba(239, 68, 68, 0.1),
+              rgba(196, 122, 122, 0.1),
               transparent 80%
             )
           `,
@@ -91,11 +91,11 @@ function PainPointCard({ text, span, index }: { text: string; span: string; inde
         }}
       />
 
-      <div className="w-6 h-6 rounded-full bg-red-950/20 border border-red-900/20 flex items-center justify-center text-red-500 shrink-0 group-hover:scale-105 transition-transform duration-300 z-10">
+      <div className="w-6 h-6 rounded-full bg-oxblood/20 border border-oxblood/20 flex items-center justify-center text-oxblood-light shrink-0 group-hover:scale-105 transition-transform duration-300 z-10">
         <XCircle className="w-3.5 h-3.5" />
       </div>
       
-      <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors z-10 font-light">
+      <p className="text-sm text-cream/60 leading-relaxed group-hover:text-cream/80 transition-colors z-10 font-light">
         {text}
       </p>
     </motion.div>
@@ -104,9 +104,9 @@ function PainPointCard({ text, span, index }: { text: string; span: string; inde
 
 export default function Problem() {
   return (
-    <section className="py-24 px-6 max-w-5xl mx-auto border-t border-white/[0.04] relative overflow-hidden" id="challenges">
+    <section className="py-24 px-6 max-w-5xl mx-auto border-t border-ivory/[0.04] relative overflow-hidden" id="challenges">
       {/* Ambient Red Glow Backdrop */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-red-950/[0.06] rounded-full blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-oxblood/[0.06] rounded-full blur-[120px] pointer-events-none -z-10" />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* Left Column: Heading */}
@@ -117,7 +117,7 @@ export default function Problem() {
           transition={{ duration: 0.6 }}
           className="lg:col-span-5 space-y-6"
         >
-          <div className="inline-block px-3 py-1 text-xs text-red-400 border border-red-950/50 bg-red-950/10 rounded-full">
+          <div className="inline-block px-3 py-1 text-xs text-oxblood-light border border-oxblood/50 bg-oxblood/10 rounded-full">
             The Reality
           </div>
           <h2 className="text-3xl md:text-5xl font-medium leading-tight tracking-tight">
@@ -144,14 +144,14 @@ export default function Problem() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="mt-16 bg-white/[0.01] border-t border-t-[#c5a880]/20 border-x border-x-white/[0.03] border-b border-b-white/[0.03] backdrop-blur-xl rounded-[2rem] p-8 md:p-10 text-center max-w-3xl mx-auto space-y-4 shadow-[0_15px_50px_-15px_rgba(0,0,0,0.8)] relative overflow-hidden"
+        className="mt-16 bg-ivory/[0.01] border-t border-t-oxblood-light/20 border-x border-x-ivory/[0.03] border-b border-b-ivory/[0.03] backdrop-blur-xl rounded-[2rem] p-8 md:p-10 text-center max-w-3xl mx-auto space-y-4 shadow-[0_15px_50px_-15px_rgba(0,0,0,0.8)] relative overflow-hidden"
       >
         {/* Decorative subtle gold light leak */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-gradient-to-r from-transparent via-[#c5a880]/40 to-transparent" />
-        <p className="text-lg md:text-xl font-light text-white leading-relaxed tracking-wide">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-gradient-to-r from-transparent via-oxblood-light/40 to-transparent" />
+        <p className="text-lg md:text-xl font-light text-ivory leading-relaxed tracking-wide">
           Your home is deeply personal.
         </p>
-        <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-xl mx-auto font-light">
+        <p className="text-sm md:text-base text-cream/60 leading-relaxed max-w-xl mx-auto font-light">
           You deserve a team that handles it with clarity, accountability, and care from day one.
         </p>
       </motion.div>

@@ -35,12 +35,12 @@ export default function Process() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 px-6 max-w-5xl mx-auto border-t border-white/[0.04] relative overflow-hidden" id="process">
+    <section className="py-24 px-6 max-w-5xl mx-auto border-t border-ivory/[0.04] relative overflow-hidden" id="process">
       {/* Background Soft Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#c5a880]/[0.02] rounded-full blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-oxblood-light/[0.02] rounded-full blur-[120px] pointer-events-none -z-10" />
 
       <div className="flex flex-col items-center text-center mb-16">
-        <div className="inline-block px-3 py-1 mb-6 text-xs text-gray-400 border border-gray-800 rounded-full">
+        <div className="inline-block px-3 py-1 mb-6 text-xs text-cream/60 border border-cream/10 rounded-full">
           Our Process
         </div>
         <h2 className="text-3xl md:text-5xl font-medium leading-tight max-w-2xl tracking-tight">
@@ -51,11 +51,11 @@ export default function Process() {
       {/* Timeline Stepper Container */}
       <div className="relative">
         {/* Horizontal Background Line (Base) for Desktop */}
-        <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[2px] bg-white/[0.04] z-0" />
+        <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[2px] bg-ivory/[0.04] z-0" />
 
         {/* Horizontal Active Glowing Line for Desktop */}
         <motion.div
-          className="hidden md:block absolute top-[28px] left-[10%] h-[2px] bg-gradient-to-r from-[#c5a880] to-[#c5a880]/60 shadow-[0_0_8px_rgba(197,168,128,0.4)] z-0 origin-left"
+          className="hidden md:block absolute top-[28px] left-[10%] h-[2px] bg-gradient-to-r from-oxblood-light to-oxblood-light/60 shadow-[0_0_8px_rgba(196,122,122,0.4)] z-0 origin-left"
           initial={{ width: "0%" }}
           animate={{
             width: hoveredIndex !== null ? `${(hoveredIndex / (steps.length - 1)) * 80}%` : "0%"
@@ -83,13 +83,13 @@ export default function Process() {
                   }}
                   className={`w-14 h-14 rounded-full border bg-[#0d0d0d] flex items-center justify-center text-sm font-medium mb-6 relative transition-all duration-300 shadow-2xl z-10 ${
                     isActive 
-                      ? "border-[#c5a880]/40 text-[#c5a880]" 
-                      : "border-white/10 text-gray-400 group-hover:border-white/20 group-hover:text-white"
+                      ? "border-oxblood-light/40 text-oxblood-light" 
+                      : "border-ivory/10 text-cream/60 group-hover:border-ivory/20 group-hover:text-ivory"
                   }`}
                 >
                   {step.num}
                   {/* Glow ring */}
-                  <div className={`absolute -inset-1.5 rounded-full border border-[#c5a880]/20 opacity-0 transition-opacity duration-300 ${
+                  <div className={`absolute -inset-1.5 rounded-full border border-oxblood-light/20 opacity-0 transition-opacity duration-300 ${
                     isActive ? "opacity-100" : ""
                   }`} />
                 </motion.div>
@@ -97,11 +97,11 @@ export default function Process() {
                 {/* Title & Description */}
                 <div className="space-y-2 px-2 z-10">
                   <h4 className={`text-sm md:text-base font-normal transition-colors duration-300 ${
-                    isActive ? "text-[#c5a880]" : "text-white group-hover:text-gray-200"
+                    isActive ? "text-oxblood-light" : "text-ivory group-hover:text-cream/90"
                   }`}>
                     {step.title}
                   </h4>
-                  <p className="text-xs md:text-[13px] text-gray-400 leading-relaxed font-light">
+                  <p className="text-xs md:text-[13px] text-cream/60 leading-relaxed font-light">
                     {step.desc}
                   </p>
                 </div>

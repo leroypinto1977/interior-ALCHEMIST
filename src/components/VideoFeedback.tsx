@@ -56,12 +56,12 @@ export default function VideoFeedback() {
   };
 
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto border-t border-white/[0.04]" id="video-feedbacks">
+    <section className="py-24 px-6 max-w-7xl mx-auto border-t border-ivory/[0.04]" id="video-feedbacks">
       <div className="flex flex-col items-center text-center mb-16">
-        <div className="inline-block px-3 py-1 mb-6 text-xs text-gray-400 border border-gray-800 rounded-full">
+        <div className="inline-block px-3 py-1 mb-6 text-xs text-cream/60 border border-cream/10 rounded-full">
           Video Reviews
         </div>
-        <h2 className="text-3xl md:text-5xl font-medium leading-tight text-white max-w-2xl">
+        <h2 className="text-3xl md:text-5xl font-medium leading-tight text-ivory max-w-2xl">
           Hear The Experiences In Their Own Words
         </h2>
       </div>
@@ -74,27 +74,27 @@ export default function VideoFeedback() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
-            className="bg-[#0b0b0b] border border-[#c5a880]/30 hover:border-[#c5a880]/60 rounded-[2rem] p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_25px_rgba(197,168,128,0.08)] group"
+            className="bg-[#0b0b0b] border border-oxblood-light/30 hover:border-oxblood-light/60 rounded-[2rem] p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_25px_rgba(196,122,122,0.08)] group"
           >
             {/* Header Text Block */}
             <div className="flex flex-col items-center text-center mb-6">
-              <h3 className="text-[#c5a880] text-2xl font-bold tracking-wide">
+              <h3 className="text-oxblood-light text-2xl font-bold tracking-wide">
                 {item.name}
               </h3>
-              <p className="text-white text-base font-normal mt-1">
+              <p className="text-ivory text-base font-normal mt-1">
                 {item.role}
               </p>
-              <p className="text-white text-sm font-normal mt-1 opacity-90">
+              <p className="text-ivory text-sm font-normal mt-1 opacity-90">
                 {item.company}
               </p>
-              <p className="text-white text-sm font-normal mt-1 opacity-70">
+              <p className="text-ivory text-sm font-normal mt-1 opacity-70">
                 {item.metric}
               </p>
             </div>
 
             {/* Video Thumbnail Block */}
             <div 
-              className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/5"
+              className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-ivory/5"
               onClick={() => openVideo(item.videoUrl, item.name)}
             >
               <Image
@@ -109,8 +109,8 @@ export default function VideoFeedback() {
               
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full border border-[#c5a880] flex items-center justify-center bg-black/20 backdrop-blur-[2px] transition-all duration-300 group-hover:scale-110 group-hover:bg-black/40 group-hover:border-[#c5a880]/90">
-                  <Play className="w-6 h-6 text-[#c5a880] fill-[#c5a880] translate-x-[2px]" />
+                <div className="w-16 h-16 rounded-full border border-oxblood-light flex items-center justify-center bg-black/20 backdrop-blur-[2px] transition-all duration-300 group-hover:scale-110 group-hover:bg-black/40 group-hover:border-oxblood-light/90">
+                  <Play className="w-6 h-6 text-oxblood-light fill-oxblood-light translate-x-[2px]" />
                 </div>
               </div>
             </div>
@@ -133,19 +133,19 @@ export default function VideoFeedback() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-4xl bg-[#111] border border-[#c5a880]/20 rounded-3xl overflow-hidden shadow-2xl"
+              className="relative w-full max-w-4xl bg-[#111] border border-oxblood-light/20 rounded-3xl overflow-hidden shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-black/40">
+              <div className="flex items-center justify-between px-6 py-4 border-b border-ivory/5 bg-black/40">
                 <div>
-                  <h4 className="text-white font-medium text-lg">
-                    Video Feedback from <span className="text-[#c5a880] font-semibold">{activeName}</span>
+                  <h4 className="text-ivory font-medium text-lg">
+                    Video Feedback from <span className="text-oxblood-light font-semibold">{activeName}</span>
                   </h4>
                 </div>
                 <button
                   onClick={closeVideo}
-                  className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-colors"
+                  className="w-10 h-10 rounded-full bg-ivory/5 hover:bg-ivory/10 flex items-center justify-center text-ivory transition-colors"
                   aria-label="Close video player"
                 >
                   <X className="w-5 h-5" />

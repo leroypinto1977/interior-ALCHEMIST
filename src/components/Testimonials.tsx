@@ -103,7 +103,7 @@ export default function Testimonials() {
   return (
     <section className="py-24 px-6 max-w-7xl mx-auto overflow-hidden" id="testimonials">
       <div className="flex flex-col items-center text-center mb-16">
-        <div className="inline-block px-3 py-1 mb-6 text-xs text-gray-400 border border-gray-800 rounded-full">
+        <div className="inline-block px-3 py-1 mb-6 text-xs text-cream/60 border border-cream/10 rounded-full">
           Testimonials
         </div>
         <h2 className="text-3xl md:text-5xl font-medium leading-tight">
@@ -126,24 +126,24 @@ export default function Testimonials() {
           {testimonials.map((testimonial, i) => (
             <div
               key={i}
-              className="snap-center w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-3xl p-8 flex flex-col justify-between min-h-[320px] transition-all duration-300 hover:bg-white/[0.05] hover:border-white/20 hover:shadow-2xl"
+              className="snap-center w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 bg-ivory/[0.03] backdrop-blur-md border border-ivory/10 rounded-3xl p-8 flex flex-col justify-between min-h-[320px] transition-all duration-300 hover:bg-ivory/[0.05] hover:border-ivory/20 hover:shadow-2xl"
             >
               <div>
                 <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-white text-white" />
+                    <Star key={j} className="w-4 h-4 fill-ivory text-ivory" />
                   ))}
                 </div>
-                <h3 className="text-white text-base md:text-lg font-medium mb-3 leading-snug">
+                <h3 className="text-ivory text-base md:text-lg font-medium mb-3 leading-snug">
                   {testimonial.title}
                 </h3>
-                <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+                <p className="text-cream/60 text-sm md:text-base leading-relaxed mb-6">
                   &quot;{testimonial.text}&quot;
                 </p>
               </div>
               
               <div className="flex items-center gap-4 mt-auto pt-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-ivory/10">
                   <Image 
                     src={testimonial.avatar}
                     alt={testimonial.name}
@@ -153,8 +153,8 @@ export default function Testimonials() {
                   />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-medium text-white">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-400">{testimonial.role}</p>
+                  <h4 className="font-medium text-ivory">{testimonial.name}</h4>
+                  <p className="text-sm text-cream/60">{testimonial.role}</p>
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function Testimonials() {
                 key={i}
                 onClick={() => scrollToActiveIndex(i)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 shrink-0 ${
-                  activeIndex === i ? "bg-white w-6" : "bg-white/20 hover:bg-white/40"
+                  activeIndex === i ? "bg-ivory w-6" : "bg-ivory/20 hover:bg-ivory/40"
                 }`}
                 aria-label={`Go to testimonial ${i + 1}`}
               />
@@ -181,7 +181,7 @@ export default function Testimonials() {
               <div
                 key={i}
                 className={`w-2 h-2 rounded-full shrink-0 ${
-                  i === 0 ? "bg-white w-6" : "bg-white/20"
+                  i === 0 ? "bg-ivory w-6" : "bg-ivory/20"
                 }`}
               />
             ))}
@@ -192,8 +192,8 @@ export default function Testimonials() {
             <button
               onClick={() => scroll("left")}
               disabled={activeIndex === 0}
-              className={`w-12 h-12 rounded-full border border-white/10 bg-white/[0.02] flex items-center justify-center text-white transition-all ${
-                activeIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:bg-white/[0.08] active:scale-95 cursor-pointer"
+              className={`w-12 h-12 rounded-full border border-ivory/10 bg-ivory/[0.02] flex items-center justify-center text-ivory transition-all ${
+                activeIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:bg-ivory/[0.08] active:scale-95 cursor-pointer"
               }`}
               aria-label="Previous testimonial"
             >
@@ -202,8 +202,8 @@ export default function Testimonials() {
             <button
               onClick={() => scroll("right")}
               disabled={activeIndex >= testimonials.length - visibleCards}
-              className={`w-12 h-12 rounded-full border border-white/10 bg-white/[0.02] flex items-center justify-center text-white transition-all ${
-                activeIndex >= testimonials.length - visibleCards ? "opacity-30 cursor-not-allowed" : "hover:bg-white/[0.08] active:scale-95 cursor-pointer"
+              className={`w-12 h-12 rounded-full border border-ivory/10 bg-ivory/[0.02] flex items-center justify-center text-ivory transition-all ${
+                activeIndex >= testimonials.length - visibleCards ? "opacity-30 cursor-not-allowed" : "hover:bg-ivory/[0.08] active:scale-95 cursor-pointer"
               }`}
               aria-label="Next testimonial"
             >

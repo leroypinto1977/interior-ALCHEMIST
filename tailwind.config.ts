@@ -19,6 +19,16 @@ const config = {
     },
     extend: {
       colors: {
+        // Brand palette (sampled from midnightmavenagency.showit.site)
+        oxblood: {
+          DEFAULT: "#461111",
+          // lifted oxblood for small text/icons on black (base is too dark to read)
+          light: "#C47A7A",
+        },
+        cream: "#ECECDF",
+        ivory: "#F3F2EC",
+        blush: "#FEF6F6",
+        taupe: "#766B60",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

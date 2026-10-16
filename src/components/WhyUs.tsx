@@ -70,7 +70,7 @@ function ReasonCard({ item, index }: { item: typeof reasons[0]; index: number })
       onMouseMove={handleMouseMove}
       onTouchStart={handleTouch}
       onTouchMove={handleTouch}
-      className={`group relative overflow-hidden bg-[#0d0d0d]/60 backdrop-blur-md border border-white/[0.03] rounded-[2rem] p-8 hover:border-[#c5a880]/20 hover:bg-[#121212] transition-colors duration-300 flex flex-col justify-between min-h-[220px] ${item.span}`}
+      className={`group relative overflow-hidden bg-[#0d0d0d]/60 backdrop-blur-md border border-ivory/[0.03] rounded-[2rem] p-8 hover:border-oxblood-light/20 hover:bg-[#121212] transition-colors duration-300 flex flex-col justify-between min-h-[220px] ${item.span}`}
     >
       {/* Gold spotlight hover background */}
       <motion.div
@@ -79,7 +79,7 @@ function ReasonCard({ item, index }: { item: typeof reasons[0]; index: number })
           background: useMotionTemplate`
             radial-gradient(
               320px circle at ${mouseX}px ${mouseY}px,
-              rgba(197, 168, 128, 0.03),
+              rgba(196, 122, 122, 0.03),
               transparent 80%
             )
           `,
@@ -93,7 +93,7 @@ function ReasonCard({ item, index }: { item: typeof reasons[0]; index: number })
           background: useMotionTemplate`
             radial-gradient(
               120px circle at ${mouseX}px ${mouseY}px,
-              rgba(197, 168, 128, 0.15),
+              rgba(196, 122, 122, 0.15),
               transparent 80%
             )
           `,
@@ -105,14 +105,14 @@ function ReasonCard({ item, index }: { item: typeof reasons[0]; index: number })
       />
 
       <div className="space-y-6 z-10">
-        <div className="w-10 h-10 bg-white/[0.02] border border-white/[0.06] rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-[#c5a880]/5 group-hover:border-[#c5a880]/20 transition-all duration-300">
-          <item.icon className="w-5 h-5 text-gray-400 group-hover:text-[#c5a880] transition-colors" />
+        <div className="w-10 h-10 bg-ivory/[0.02] border border-ivory/[0.06] rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-oxblood-light/5 group-hover:border-oxblood-light/20 transition-all duration-300">
+          <item.icon className="w-5 h-5 text-cream/60 group-hover:text-oxblood-light transition-colors" />
         </div>
         <div className="space-y-2">
-          <h3 className="text-base md:text-lg font-normal text-white tracking-wide">
+          <h3 className="text-base md:text-lg font-normal text-ivory tracking-wide">
             {item.title}
           </h3>
-          <p className="text-gray-400 text-xs md:text-sm leading-relaxed group-hover:text-gray-300 transition-colors font-light">
+          <p className="text-cream/60 text-xs md:text-sm leading-relaxed group-hover:text-cream/80 transition-colors font-light">
             {item.description}
           </p>
         </div>
@@ -123,12 +123,12 @@ function ReasonCard({ item, index }: { item: typeof reasons[0]; index: number })
 
 export default function WhyUs() {
   return (
-    <section className="py-24 px-6 max-w-5xl mx-auto border-t border-white/[0.04] relative overflow-hidden" id="why-us">
+    <section className="py-24 px-6 max-w-5xl mx-auto border-t border-ivory/[0.04] relative overflow-hidden" id="why-us">
       {/* Background Soft Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#c5a880]/[0.02] rounded-full blur-[150px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-oxblood-light/[0.02] rounded-full blur-[150px] pointer-events-none -z-10" />
 
       <div className="flex flex-col items-center text-center mb-16">
-        <div className="inline-block px-3 py-1 mb-6 text-xs text-gray-400 border border-gray-800 rounded-full">
+        <div className="inline-block px-3 py-1 mb-6 text-xs text-cream/60 border border-cream/10 rounded-full">
           Why Us
         </div>
         <h2 className="text-3xl md:text-5xl font-medium leading-tight tracking-tight">

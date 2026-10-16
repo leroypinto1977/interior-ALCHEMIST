@@ -95,21 +95,21 @@ export default function Navbar() {
           isOpen
             ? "bg-transparent border-b border-transparent"
             : isScrolled 
-              ? "bg-[#0a0a0a] border-b border-white/[0.04] md:bg-black/20 md:backdrop-blur-md md:border-b md:border-white/[0.04]" 
-              : "bg-[#0a0a0a] border-b border-white/[0.04] md:bg-transparent md:border-b-transparent"
+              ? "bg-[#0a0a0a] border-b border-ivory/[0.04] md:bg-black/20 md:backdrop-blur-md md:border-b md:border-ivory/[0.04]" 
+              : "bg-[#0a0a0a] border-b border-ivory/[0.04] md:bg-transparent md:border-b-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Brand logo on left */}
-          <div className="text-xl md:text-2xl tracking-tighter text-white z-50">
+          <div className="text-xl md:text-2xl tracking-tighter text-ivory z-50">
             <Link href="/" onClick={handleLogoClick} className="hover:opacity-80 transition-opacity">
-              <span className="font-light text-white/75">interior</span>{" "}
-              <span className="font-bold bg-gradient-to-r from-white via-white to-[#c5a880] text-transparent bg-clip-text">ALCHEMIST</span>
+              <span className="font-light text-ivory/75">interior</span>{" "}
+              <span className="font-bold bg-gradient-to-r from-ivory via-ivory to-oxblood-light text-transparent bg-clip-text">ALCHEMIST</span>
             </Link>
           </div>
 
           {/* Desktop view: Floating Glass Pill Container */}
-          <div className="hidden md:flex items-center bg-white/[0.02] backdrop-blur-md border border-white/[0.06] rounded-full p-1 shadow-2xl">
+          <div className="hidden md:flex items-center bg-ivory/[0.02] backdrop-blur-md border border-ivory/[0.06] rounded-full p-1 shadow-2xl">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href;
               return (
@@ -118,8 +118,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-4 py-2 text-xs font-normal rounded-full transition-all duration-300 ${
                     isActive 
-                      ? "bg-white/[0.08] text-white border border-white/[0.08]" 
-                      : "text-gray-400 hover:text-white hover:bg-white/[0.02]"
+                      ? "bg-ivory/[0.08] text-ivory border border-ivory/[0.08]" 
+                      : "text-cream/60 hover:text-ivory hover:bg-ivory/[0.02]"
                   }`}
                 >
                   {link.name}
@@ -134,8 +134,8 @@ export default function Navbar() {
             className="flex md:hidden flex-col gap-1.5 justify-center items-center w-8 h-8 z-50 relative focus:outline-none"
             aria-label="Toggle menu"
           >
-            <span className={`h-[1.5px] w-5 bg-white transition-all duration-300 ${isOpen ? "rotate-45 translate-y-[4px]" : ""}`} />
-            <span className={`h-[1.5px] w-5 bg-white transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-[4px]" : ""}`} />
+            <span className={`h-[1.5px] w-5 bg-ivory transition-all duration-300 ${isOpen ? "rotate-45 translate-y-[4px]" : ""}`} />
+            <span className={`h-[1.5px] w-5 bg-ivory transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-[4px]" : ""}`} />
           </button>
         </div>
       </motion.nav>
@@ -183,16 +183,16 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`text-xl font-normal py-5 border-b border-white/[0.06] flex items-center justify-between group transition-colors duration-300 ${
-                        isActive ? "text-white" : "text-gray-400 hover:text-white"
+                      className={`text-xl font-normal py-5 border-b border-ivory/[0.06] flex items-center justify-between group transition-colors duration-300 ${
+                        isActive ? "text-ivory" : "text-cream/60 hover:text-ivory"
                       }`}
                     >
                       <span className="relative py-1">
                         {link.name}
                         {/* Slide underline on hover */}
-                        <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
+                        <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-ivory transition-all duration-300 group-hover:w-full" />
                       </span>
-                      <span className="text-gray-500 group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300 text-lg">
+                      <span className="text-cream/45 group-hover:text-ivory group-hover:translate-x-1.5 transition-all duration-300 text-lg">
                         →
                       </span>
                     </Link>

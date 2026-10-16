@@ -82,37 +82,37 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="flex-1 max-w-2xl"
       >
-        <div className="inline-block px-3 py-1 mb-6 text-xs text-gray-400 border border-gray-800 rounded-full">
+        <div className="inline-block px-3 py-1 mb-6 text-xs text-cream/60 border border-cream/10 rounded-full">
           Concept Studio
         </div>
         <h1 className="text-4xl md:text-6xl font-normal leading-tight mb-6 tracking-tight">
           Your Home Should Feel Like A Masterpiece You Get To Live Inside.
         </h1>
-        <p className="text-sm md:text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+        <p className="text-sm md:text-base text-cream/60 leading-relaxed mb-8 max-w-xl">
           Interior Alchemist designs emotionally refined living spaces for modern homeowners who want more than ordinary interiors. If you want a home that feels luxurious, intentional, peaceful, and deeply personal.
         </p>
         <div className="flex flex-col gap-4">
           <Link href="/book" className="w-fit">
-            <Button className="w-full rounded-full px-8 py-6 bg-white text-black hover:bg-[#c5a880] active:bg-[#c5a880] hover:text-black hover:shadow-[0_0_25px_rgba(197,168,128,0.35)] transition-all duration-300 text-base font-normal">
+            <Button className="w-full rounded-full px-8 py-6 bg-cream text-black hover:bg-oxblood active:bg-oxblood hover:text-ivory hover:shadow-[0_0_25px_rgba(70,17,17,0.6)] transition-all duration-300 text-base font-normal">
               Book Your Free Design Consultation
             </Button>
           </Link>
-          <p className="text-xs text-gray-500 max-w-md pl-1 mt-1">
+          <p className="text-xs text-cream/45 max-w-md pl-1 mt-1">
             Limited projects are taken each month to maintain execution quality.
           </p>
         </div>
 
         {/* Trust Line */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 border-t border-white/[0.06] pt-8 max-w-xl">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 border-t border-ivory/[0.06] pt-8 max-w-xl">
           {[
             "India’s 1st Conceptual Interior Design Studio",
             "End-to-End Execution",
             "Structured Timelines & Process Clarity",
             "Premium Material & Finish Selection"
           ].map((text, idx) => (
-            <div key={idx} className="flex items-center gap-3 text-xs text-gray-400">
-              <span className="w-5 h-5 rounded-full border border-[#c5a880]/30 bg-[#c5a880]/5 flex items-center justify-center text-[#c5a880] shrink-0">
-                <Check className="w-3 h-3 text-[#c5a880]" strokeWidth={3} />
+            <div key={idx} className="flex items-center gap-3 text-xs text-cream/60">
+              <span className="w-5 h-5 rounded-full border border-oxblood-light/30 bg-oxblood-light/5 flex items-center justify-center text-oxblood-light shrink-0">
+                <Check className="w-3 h-3 text-oxblood-light" strokeWidth={3} />
               </span>
               <span className="font-light">{text}</span>
             </div>
@@ -134,7 +134,7 @@ export default function Hero() {
               {column1Cards.map((card) => (
                 <div 
                   key={`horiz-a-${card.id}`}
-                  className="relative w-[160px] h-[110px] rounded-[20px] overflow-hidden group border border-white/5 bg-neutral-900/50"
+                  className="relative w-[160px] h-[110px] rounded-[20px] overflow-hidden group border border-ivory/5 bg-neutral-900/50"
                 >
                   <Image 
                     src={card.image} 
@@ -145,8 +145,8 @@ export default function Hero() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
                   <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                    <h3 className="text-[10px] font-normal text-white mb-0.5 tracking-wide">{card.title}</h3>
-                    <p className="text-[8px] text-gray-400 font-normal">{card.subtitle}</p>
+                    <h3 className="text-[10px] font-normal text-ivory mb-0.5 tracking-wide">{card.title}</h3>
+                    <p className="text-[8px] text-cream/60 font-normal">{card.subtitle}</p>
                   </div>
                 </div>
               ))}
@@ -156,7 +156,7 @@ export default function Hero() {
               {column1Cards.map((card) => (
                 <div 
                   key={`horiz-a-dup-${card.id}`}
-                  className="relative w-[160px] h-[110px] rounded-[20px] overflow-hidden group border border-white/5 bg-neutral-900/50"
+                  className="relative w-[160px] h-[110px] rounded-[20px] overflow-hidden group border border-ivory/5 bg-neutral-900/50"
                 >
                   <Image 
                     src={card.image} 
@@ -167,8 +167,8 @@ export default function Hero() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
                   <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                    <h3 className="text-[10px] font-normal text-white mb-0.5 tracking-wide">{card.title}</h3>
-                    <p className="text-[8px] text-gray-400 font-normal">{card.subtitle}</p>
+                    <h3 className="text-[10px] font-normal text-ivory mb-0.5 tracking-wide">{card.title}</h3>
+                    <p className="text-[8px] text-cream/60 font-normal">{card.subtitle}</p>
                   </div>
                 </div>
               ))}
@@ -188,7 +188,7 @@ export default function Hero() {
               {column2Cards.map((card) => (
                 <div 
                   key={`horiz-b-${card.id}`}
-                  className="relative w-[160px] h-[110px] rounded-[20px] overflow-hidden group border border-white/5 bg-neutral-900/50"
+                  className="relative w-[160px] h-[110px] rounded-[20px] overflow-hidden group border border-ivory/5 bg-neutral-900/50"
                 >
                   <Image 
                     src={card.image} 
@@ -199,8 +199,8 @@ export default function Hero() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
                   <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                    <h3 className="text-[10px] font-normal text-white mb-0.5 tracking-wide">{card.title}</h3>
-                    <p className="text-[8px] text-gray-400 font-normal">{card.subtitle}</p>
+                    <h3 className="text-[10px] font-normal text-ivory mb-0.5 tracking-wide">{card.title}</h3>
+                    <p className="text-[8px] text-cream/60 font-normal">{card.subtitle}</p>
                   </div>
                 </div>
               ))}
@@ -210,7 +210,7 @@ export default function Hero() {
               {column2Cards.map((card) => (
                 <div 
                   key={`horiz-b-dup-${card.id}`}
-                  className="relative w-[160px] h-[110px] rounded-[20px] overflow-hidden group border border-white/5 bg-neutral-900/50"
+                  className="relative w-[160px] h-[110px] rounded-[20px] overflow-hidden group border border-ivory/5 bg-neutral-900/50"
                 >
                   <Image 
                     src={card.image} 
@@ -221,8 +221,8 @@ export default function Hero() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
                   <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                    <h3 className="text-[10px] font-normal text-white mb-0.5 tracking-wide">{card.title}</h3>
-                    <p className="text-[8px] text-gray-400 font-normal">{card.subtitle}</p>
+                    <h3 className="text-[10px] font-normal text-ivory mb-0.5 tracking-wide">{card.title}</h3>
+                    <p className="text-[8px] text-cream/60 font-normal">{card.subtitle}</p>
                   </div>
                 </div>
               ))}
@@ -251,7 +251,7 @@ export default function Hero() {
                 {column1Cards.map((card) => (
                   <div 
                     key={`col1-a-${card.id}`}
-                    className="relative w-full h-[160px] sm:h-auto sm:aspect-[4/5] rounded-[24px] md:rounded-[32px] overflow-hidden group border border-white/5 bg-neutral-900/50"
+                    className="relative w-full h-[160px] sm:h-auto sm:aspect-[4/5] rounded-[24px] md:rounded-[32px] overflow-hidden group border border-ivory/5 bg-neutral-900/50"
                   >
                     <Image 
                       src={card.image} 
@@ -262,8 +262,8 @@ export default function Hero() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
-                      <h3 className="text-xs md:text-sm font-normal text-white mb-0.5 tracking-wide">{card.title}</h3>
-                      <p className="text-[10px] md:text-xs text-gray-400 font-normal">{card.subtitle}</p>
+                      <h3 className="text-xs md:text-sm font-normal text-ivory mb-0.5 tracking-wide">{card.title}</h3>
+                      <p className="text-[10px] md:text-xs text-cream/60 font-normal">{card.subtitle}</p>
                     </div>
                   </div>
                 ))}
@@ -273,7 +273,7 @@ export default function Hero() {
                 {column1Cards.map((card) => (
                   <div 
                     key={`col1-b-${card.id}`}
-                    className="relative w-full h-[160px] sm:h-auto sm:aspect-[4/5] rounded-[24px] md:rounded-[32px] overflow-hidden group border border-white/5 bg-neutral-900/50"
+                    className="relative w-full h-[160px] sm:h-auto sm:aspect-[4/5] rounded-[24px] md:rounded-[32px] overflow-hidden group border border-ivory/5 bg-neutral-900/50"
                   >
                     <Image 
                       src={card.image} 
@@ -284,8 +284,8 @@ export default function Hero() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
-                      <h3 className="text-xs md:text-sm font-normal text-white mb-0.5 tracking-wide">{card.title}</h3>
-                      <p className="text-[10px] md:text-xs text-gray-400 font-normal">{card.subtitle}</p>
+                      <h3 className="text-xs md:text-sm font-normal text-ivory mb-0.5 tracking-wide">{card.title}</h3>
+                      <p className="text-[10px] md:text-xs text-cream/60 font-normal">{card.subtitle}</p>
                     </div>
                   </div>
                 ))}
@@ -301,7 +301,7 @@ export default function Hero() {
                 {column2Cards.map((card) => (
                   <div 
                     key={`col2-a-${card.id}`}
-                    className="relative w-full h-[160px] sm:h-auto sm:aspect-[4/5] rounded-[24px] md:rounded-[32px] overflow-hidden group border border-white/5 bg-neutral-900/50"
+                    className="relative w-full h-[160px] sm:h-auto sm:aspect-[4/5] rounded-[24px] md:rounded-[32px] overflow-hidden group border border-ivory/5 bg-neutral-900/50"
                   >
                     <Image 
                       src={card.image} 
@@ -312,8 +312,8 @@ export default function Hero() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
-                      <h3 className="text-xs md:text-sm font-normal text-white mb-0.5 tracking-wide">{card.title}</h3>
-                      <p className="text-[10px] md:text-xs text-gray-400 font-normal">{card.subtitle}</p>
+                      <h3 className="text-xs md:text-sm font-normal text-ivory mb-0.5 tracking-wide">{card.title}</h3>
+                      <p className="text-[10px] md:text-xs text-cream/60 font-normal">{card.subtitle}</p>
                     </div>
                   </div>
                 ))}
@@ -323,7 +323,7 @@ export default function Hero() {
                 {column2Cards.map((card) => (
                   <div 
                     key={`col2-b-${card.id}`}
-                    className="relative w-full h-[160px] sm:h-auto sm:aspect-[4/5] rounded-[24px] md:rounded-[32px] overflow-hidden group border border-white/5 bg-neutral-900/50"
+                    className="relative w-full h-[160px] sm:h-auto sm:aspect-[4/5] rounded-[24px] md:rounded-[32px] overflow-hidden group border border-ivory/5 bg-neutral-900/50"
                   >
                     <Image 
                       src={card.image} 
@@ -334,8 +334,8 @@ export default function Hero() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
-                      <h3 className="text-xs md:text-sm font-normal text-white mb-0.5 tracking-wide">{card.title}</h3>
-                      <p className="text-[10px] md:text-xs text-gray-400 font-normal">{card.subtitle}</p>
+                      <h3 className="text-xs md:text-sm font-normal text-ivory mb-0.5 tracking-wide">{card.title}</h3>
+                      <p className="text-[10px] md:text-xs text-cream/60 font-normal">{card.subtitle}</p>
                     </div>
                   </div>
                 ))}
