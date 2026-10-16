@@ -1,3 +1,4 @@
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const benefits = [
@@ -9,24 +10,26 @@ const benefits = [
 
 export default function Services() {
   return (
-    <section className="bg-oxblood text-cream py-20 md:py-32 px-6 md:px-10" id="services">
+    <section className="relative isolate overflow-hidden bg-sand text-ink py-20 md:py-32 px-6 md:px-10" id="services">
+      <Ornament kind="lines" className="-left-24 top-10 w-56 md:w-72" />
+      <Ornament kind="kaleido" className="-right-16 -bottom-10 w-64 md:w-80" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="flex items-center gap-6 eyebrow">
             <span>What you get</span>
-            <span className="flex-1 h-px bg-cream/50" />
+            <span className="flex-1 h-px bg-ink/30" />
             <span>What you get</span>
           </div>
         </Reveal>
 
-        <ul className="mt-16 border-t border-cream/30">
+        <ul className="mt-16 border-t border-ink/20">
           {benefits.map((b, i) => (
             <Reveal key={i} delay={i * 0.08}>
-              <li className="group grid md:grid-cols-[1fr_auto] items-center gap-4 md:gap-12 py-8 md:py-10 border-b border-cream/30">
+              <li className="group grid md:grid-cols-[1fr_auto] items-center gap-4 md:gap-12 py-8 md:py-10 border-b border-ink/20">
                 <h3 className="headline text-[clamp(2.4rem,6vw,5.5rem)] group-hover:translate-x-3 transition-transform duration-500 ease-out">
                   {b.title}
                 </h3>
-                <p className="md:max-w-xs md:text-right text-cream/75 leading-relaxed">{b.text}</p>
+                <p className="md:max-w-xs md:text-right text-taupe leading-relaxed">{b.text}</p>
               </li>
             </Reveal>
           ))}

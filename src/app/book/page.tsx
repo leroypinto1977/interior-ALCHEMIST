@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
 const field =
-  "w-full bg-blush border border-oxblood/30 px-4 py-3.5 text-base font-light text-ink placeholder:text-taupe/70 focus:outline-none focus:border-oxblood transition-colors";
+  "w-full bg-blush border border-ink/30 px-4 py-3.5 text-base font-light text-ink placeholder:text-taupe/70 focus:outline-none focus:border-ink transition-colors";
 
 export default function BookConsultationPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -14,8 +14,8 @@ export default function BookConsultationPage() {
     setForm({ ...form, [k]: e.target.value });
 
   return (
-    <main className="min-h-screen bg-oxblood text-cream flex flex-col">
-      <header className="flex items-center justify-between h-16 px-5 md:px-10 border-b border-cream/20">
+    <main className="min-h-screen bg-sand text-ink flex flex-col">
+      <header className="flex items-center justify-between h-16 px-5 md:px-10 border-b border-ink/20">
         <Link href="/" className="font-serif text-xl md:text-2xl uppercase tracking-tight">
           Interior Alchemist
         </Link>
@@ -36,7 +36,7 @@ export default function BookConsultationPage() {
               className="w-full max-w-2xl bg-cream text-ink p-8 md:p-14"
             >
               <p className="eyebrow text-taupe text-center">Consultation</p>
-              <h1 className="font-serif text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] text-oxblood text-center mt-5">
+              <h1 className="font-serif text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] text-ink text-center mt-5">
                 Request a <em>private</em> consultation
               </h1>
               <p className="text-taupe text-center mt-5 max-w-md mx-auto leading-relaxed">
@@ -73,7 +73,7 @@ export default function BookConsultationPage() {
                   onChange={set("message")}
                   aria-label="Project brief"
                 />
-                <button type="submit" className="btn btn-oxblood w-full mt-4">
+                <button type="submit" className="btn btn-ink w-full mt-4">
                   Request consultation
                 </button>
               </form>
@@ -87,10 +87,10 @@ export default function BookConsultationPage() {
               className="w-full max-w-xl bg-cream text-ink p-10 md:p-14 text-center"
             >
               <p className="eyebrow text-taupe">Request received</p>
-              <h2 className="font-serif text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] text-oxblood mt-5">
+              <h2 className="font-serif text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] text-ink mt-5">
                 Thank you, {form.name.split(" ")[0]}
               </h2>
-              <dl className="mt-8 border-t border-b border-oxblood/20 divide-y divide-oxblood/20 text-left">
+              <dl className="mt-8 border-t border-b border-ink/20 divide-y divide-ink/20 text-left">
                 <div className="flex justify-between py-3">
                   <dt className="eyebrow text-taupe">Date</dt>
                   <dd>{form.date}</dd>
@@ -103,7 +103,7 @@ export default function BookConsultationPage() {
               <p className="mt-6 text-taupe leading-relaxed">
                 Our principal designer will review your notes and reach out within 24 hours to confirm your meeting.
               </p>
-              <Link href="/" className="btn btn-oxblood mt-8">
+              <Link href="/" className="btn btn-ink mt-8">
                 Return home
               </Link>
             </motion.div>

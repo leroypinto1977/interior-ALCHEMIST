@@ -1,3 +1,4 @@
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const proof = [
@@ -17,13 +18,15 @@ const trust = [
 
 export default function About() {
   return (
-    <section className="bg-cream py-20 md:py-36 px-6" id="about">
+    <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6" id="about">
+      <Ornament kind="arcs" className="-left-32 -bottom-28 w-[22rem] md:w-[30rem]" />
+      <Ornament kind="kaleido" className="-right-12 top-16 w-56 md:w-80" />
       <div className="max-w-5xl mx-auto text-center">
         <Reveal>
           <p className="eyebrow text-taupe">About Interior Alchemist</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-oxblood text-[clamp(2.6rem,6.5vw,5.5rem)] mt-8">
+          <h2 className="headline text-ink text-[clamp(2.6rem,6.5vw,5.5rem)] mt-8">
             We design <em>emotionally</em> refined homes for people who want <em>more</em> than ordinary interiors — and we <em>build</em> them too
           </h2>
         </Reveal>
@@ -34,10 +37,10 @@ export default function About() {
         </Reveal>
 
         <Reveal delay={0.25} className="mt-16">
-          <ul className="grid grid-cols-2 md:grid-cols-5 border-t border-b border-oxblood/20 divide-y md:divide-y-0 md:divide-x divide-oxblood/20">
+          <ul className="grid grid-cols-2 md:grid-cols-5 border-t border-b border-ink/20 divide-y md:divide-y-0 md:divide-x divide-ink/20">
             {proof.map((p) => (
               <li key={p.label} className="py-6 px-3 last:col-span-2 md:last:col-span-1">
-                <span className="font-serif text-3xl md:text-4xl text-oxblood block">{p.value}</span>
+                <span className="font-serif text-3xl md:text-4xl text-ink block">{p.value}</span>
                 <span className="eyebrow text-taupe mt-2 block">{p.label}</span>
               </li>
             ))}
@@ -45,7 +48,7 @@ export default function About() {
         </Reveal>
 
         <Reveal delay={0.3}>
-          <ul className="mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-x-8 gap-y-3 eyebrow text-oxblood text-left mx-auto w-fit sm:w-auto">
+          <ul className="mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-x-8 gap-y-3 eyebrow text-ink text-left mx-auto w-fit sm:w-auto">
             {trust.map((t) => (
               <li key={t} className="flex items-center gap-3 leading-relaxed">
                 <span aria-hidden className="w-1.5 h-1.5 bg-oxblood rotate-45" />

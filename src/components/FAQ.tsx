@@ -1,3 +1,4 @@
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const faqs = [
@@ -29,23 +30,25 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="bg-cream py-20 md:py-36 px-6 md:px-10" id="faq">
+    <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="faq">
+      <Ornament kind="kaleido" className="-left-24 bottom-10 w-56 md:w-72" />
+      <Ornament kind="arcs" className="-right-44 -top-28 w-[22rem] md:w-[28rem] rotate-180" />
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-4 border-l border-ink/40 pl-5">
           <Reveal>
             <p className="eyebrow text-taupe">FAQ</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="headline text-oxblood text-[clamp(2.8rem,6vw,5rem)] mt-8">
+            <h2 className="headline text-ink text-[clamp(2.8rem,6vw,5rem)] mt-8">
               Frequently <em>asked</em> questions
             </h2>
           </Reveal>
         </div>
-        <div className="lg:col-span-8 border-t border-oxblood/30">
+        <div className="lg:col-span-8 border-t border-ink/30">
           {faqs.map((f, i) => (
             <Reveal key={f.q} delay={0.1 + i * 0.05}>
-              <details className="group border-b border-oxblood/30">
-                <summary className="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none font-serif text-2xl md:text-3xl text-oxblood [&::-webkit-details-marker]:hidden">
+              <details className="group border-b border-ink/30">
+                <summary className="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none font-serif text-2xl md:text-3xl text-ink [&::-webkit-details-marker]:hidden">
                   {f.q}
                   <span aria-hidden className="font-serif text-3xl leading-none transition-transform duration-300 group-open:rotate-45">
                     +

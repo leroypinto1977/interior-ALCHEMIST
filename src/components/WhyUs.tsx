@@ -1,3 +1,4 @@
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const reasons = [
@@ -11,13 +12,15 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-cream py-20 md:py-36 px-6 md:px-10" id="why-us">
+    <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="why-us">
+      <Ornament kind="kaleido" className="-right-20 top-4 w-64 md:w-80" />
+      <Ornament kind="arcs" className="-left-40 -bottom-40 w-[22rem] md:w-[26rem]" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">Why us</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-oxblood text-[clamp(2.8rem,6.5vw,6rem)] mt-8 max-w-4xl">
+          <h2 className="headline text-ink text-[clamp(2.8rem,6.5vw,6rem)] mt-8 max-w-4xl">
             Why homeowners <em>trust</em> Interior Alchemist
           </h2>
         </Reveal>
@@ -25,8 +28,8 @@ export default function WhyUs() {
         <ul className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
           {reasons.map((r, i) => (
             <Reveal key={r.title} delay={0.1 + i * 0.06}>
-              <li className="border-t border-oxblood/30 pt-6">
-                <h3 className="font-serif text-2xl md:text-3xl text-oxblood">{r.title}</h3>
+              <li className="border-t border-ink/30 pt-6">
+                <h3 className="font-serif text-2xl md:text-3xl text-ink">{r.title}</h3>
                 <p className="mt-3 text-taupe leading-relaxed">{r.text}</p>
               </li>
             </Reveal>

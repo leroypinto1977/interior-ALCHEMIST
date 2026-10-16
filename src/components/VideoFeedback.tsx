@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { Play, X } from "lucide-react";
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const feedbacks = [
@@ -33,13 +34,15 @@ export default function VideoFeedback() {
   const [active, setActive] = useState<(typeof feedbacks)[0] | null>(null);
 
   return (
-    <section className="bg-cream py-20 md:py-36 px-6 md:px-10" id="video-feedbacks">
+    <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="video-feedbacks">
+      <Ornament kind="lines" className="-right-20 -top-6 w-64 md:w-80" />
+      <Ornament kind="kaleido" className="-left-20 bottom-6 w-56 md:w-72" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">Video reviews</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-oxblood text-[clamp(2.8rem,6.5vw,6rem)] mt-8 max-w-3xl">
+          <h2 className="headline text-ink text-[clamp(2.8rem,6.5vw,6rem)] mt-8 max-w-3xl">
             Hear it in <em>their</em> own words
           </h2>
         </Reveal>
@@ -55,12 +58,12 @@ export default function VideoFeedback() {
                 <span className="relative block aspect-[4/5] overflow-hidden">
                   <Image src={f.thumbnail} alt="" fill sizes="340px" className="photo" />
                   <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="w-16 h-16 rounded-full bg-cream/90 text-oxblood flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <span className="w-16 h-16 rounded-full bg-cream/90 text-ink flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Play className="w-6 h-6 fill-current translate-x-0.5" />
                     </span>
                   </span>
                 </span>
-                <span className="block mt-4 font-serif text-2xl text-oxblood">{f.name}</span>
+                <span className="block mt-4 font-serif text-2xl text-ink">{f.name}</span>
                 <span className="block eyebrow text-taupe mt-1">{f.role}</span>
               </button>
             </Reveal>
@@ -74,7 +77,7 @@ export default function VideoFeedback() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[80] bg-oxblood/95 flex items-center justify-center p-4"
+            className="fixed inset-0 z-[80] bg-ink/90 flex items-center justify-center p-4"
             onClick={() => setActive(null)}
           >
             <motion.div
@@ -84,7 +87,7 @@ export default function VideoFeedback() {
               className="relative w-full max-w-4xl bg-ink"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between px-5 py-3 bg-blush text-oxblood">
+              <div className="flex items-center justify-between px-5 py-3 bg-blush text-ink">
                 <span className="eyebrow">{active.name}</span>
                 <button onClick={() => setActive(null)} aria-label="Close video" className="hover:rotate-90 transition-transform">
                   <X className="w-5 h-5" />

@@ -4,18 +4,18 @@ const config = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      // Brand palette (sampled from midnightmavenagency.showit.site)
+      // Palette sampled from the client's "Option" mockup
       colors: {
-        oxblood: {
-          DEFAULT: "#461111",
-          // lifted oxblood for small text on black
-          light: "#C47A7A",
-        },
-        cream: "#ECECDF",
-        ivory: "#F3F2EC",
-        blush: "#FEF6F6",
-        taupe: "#766B60",
+        cream: "#F6EFE8", // page base
+        sand: "#EDE8DD", // alternate band
+        blush: "#FBFCF9", // cards and polaroid frames
         ink: "#0B0B0B",
+        taupe: "#766B60",
+        ornament: "#E3D9CC", // background line art
+        oxblood: "#3F1214", // section stripe only
+        gold: "#B19462",
+        stone: "#BDB3A3",
+        ivory: "#F3F2EC",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -38,17 +38,10 @@ const config = {
         sans: ["var(--font-sans)", "sans-serif"],
         serif: ["var(--font-serif)", "serif"],
         condensed: ["var(--font-condensed)", "sans-serif"],
+        display: ["var(--font-display)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
         "marquee-left": {
           "0%": { transform: "translate3d(0, 0, 0)" },
           "100%": { transform: "translate3d(-50%, 0, 0)" },
@@ -59,8 +52,6 @@ const config = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
         "marquee-left": "marquee-left 40s linear infinite",
         "marquee-right": "marquee-right 40s linear infinite",
       },

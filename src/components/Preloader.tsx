@@ -33,7 +33,7 @@ export default function Preloader() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-[100] bg-oxblood text-cream flex flex-col items-center justify-center"
+          className="fixed inset-0 z-[100] bg-cream text-ink flex flex-col items-center justify-center"
           exit={{ y: "-100%" }}
           transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
         >

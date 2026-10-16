@@ -1,3 +1,4 @@
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const points = [
@@ -11,14 +12,16 @@ const points = [
 
 export default function Trust() {
   return (
-    <section className="bg-blush py-20 md:py-36 px-6 md:px-10" id="trust">
+    <section className="relative isolate overflow-hidden bg-sand py-20 md:py-36 px-6 md:px-10" id="trust">
+      <Ornament kind="arcs" className="-left-36 -top-10 w-[20rem] md:w-[26rem]" />
+      <Ornament kind="kaleido" className="-right-16 top-10 w-64 md:w-80" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
         <div className="lg:col-span-6">
           <Reveal>
             <p className="eyebrow text-taupe">Clarity & care</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="headline text-oxblood text-[clamp(2.8rem,6vw,5.5rem)] mt-8">
+            <h2 className="headline text-ink text-[clamp(2.8rem,6vw,5.5rem)] mt-8">
               A premium experience built around <em>clarity</em> and accountability
             </h2>
           </Reveal>
@@ -28,10 +31,10 @@ export default function Trust() {
             </p>
           </Reveal>
         </div>
-        <ul className="lg:col-span-6 border-t border-oxblood/30">
+        <ul className="lg:col-span-6 border-t border-ink/30">
           {points.map((p, i) => (
             <Reveal key={p} delay={0.1 + i * 0.06}>
-              <li className="flex items-center justify-between py-5 border-b border-oxblood/30 font-serif text-2xl md:text-3xl text-oxblood">
+              <li className="flex items-center justify-between py-5 border-b border-ink/30 font-serif text-2xl md:text-3xl text-ink">
                 {p}
                 <span aria-hidden className="eyebrow text-taupe">Included</span>
               </li>

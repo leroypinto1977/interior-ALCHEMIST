@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const projects = [
@@ -28,14 +29,16 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="bg-blush py-20 md:py-36 px-6 md:px-10" id="portfolio">
+    <section className="relative isolate overflow-hidden bg-sand py-20 md:py-36 px-6 md:px-10" id="portfolio">
+      <Ornament kind="kaleido" className="-left-24 top-16 w-56 md:w-72" />
+      <Ornament kind="kaleido" className="-right-28 bottom-6 w-72 md:w-96" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-7">
           <Reveal>
             <p className="eyebrow text-taupe">Our portfolio</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="headline text-oxblood text-[clamp(2.8rem,6.5vw,6rem)] mt-8">
+            <h2 className="headline text-ink text-[clamp(2.8rem,6.5vw,6rem)] mt-8">
               Homes that <em>feel</em> as good as they <em>look</em>
             </h2>
           </Reveal>
@@ -45,11 +48,11 @@ export default function Projects() {
             </p>
           </Reveal>
 
-          <ul className="mt-14 border-t border-oxblood/30">
+          <ul className="mt-14 border-t border-ink/30">
             {projects.map((p, i) => (
               <Reveal key={p.title} delay={0.2 + i * 0.08}>
-                <li className="group py-7 border-b border-oxblood/30 grid sm:grid-cols-[1fr_auto] gap-x-8 gap-y-2 items-baseline">
-                  <h3 className="font-serif text-3xl md:text-4xl text-oxblood group-hover:translate-x-2 transition-transform duration-500">
+                <li className="group py-7 border-b border-ink/30 grid sm:grid-cols-[1fr_auto] gap-x-8 gap-y-2 items-baseline">
+                  <h3 className="font-serif text-3xl md:text-4xl text-ink group-hover:translate-x-2 transition-transform duration-500">
                     {p.title}
                   </h3>
                   <span className="eyebrow text-taupe">
@@ -62,7 +65,7 @@ export default function Projects() {
           </ul>
 
           <Reveal delay={0.3}>
-            <Link href="/book" className="btn btn-oxblood mt-12">
+            <Link href="/book" className="btn btn-ink mt-12">
               Start your project →
             </Link>
           </Reveal>

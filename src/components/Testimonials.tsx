@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const testimonials = [
@@ -27,12 +28,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-oxblood text-cream py-20 md:py-36 px-6 md:px-10" id="testimonials">
+    <section className="relative isolate overflow-hidden bg-sand text-ink py-20 md:py-36 px-6 md:px-10" id="testimonials">
+      <Ornament kind="lines" className="-right-12 top-6 w-56 md:w-72" />
+      <Ornament kind="kaleido" className="left-1/2 bottom-0 w-40 md:w-56" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
-          <div className="flex items-center gap-6 eyebrow text-cream/70">
+          <div className="flex items-center gap-6 eyebrow text-taupe">
             <span>Kind words</span>
-            <span className="flex-1 h-px bg-cream/40" />
+            <span className="flex-1 h-px bg-ink/30" />
             <span>From homeowners</span>
           </div>
         </Reveal>
@@ -42,7 +45,7 @@ export default function Testimonials() {
             <Reveal key={t.name} delay={i * 0.1} className="h-full">
               <figure className="bg-blush text-ink p-8 md:p-10 h-full flex flex-col">
                 <blockquote className="flex-1">
-                  <p className="font-serif text-2xl md:text-3xl leading-tight text-oxblood">“{t.title}”</p>
+                  <p className="font-display font-bold tracking-tight text-xl md:text-2xl leading-snug text-ink">“{t.title}”</p>
                   <p className="mt-6 text-taupe leading-relaxed">{t.text}</p>
                 </blockquote>
                 <figcaption className="mt-10 flex items-center gap-4">

@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --background: 60 25% 90%;
+    --background: 31 44% 94%;
     --foreground: 0 0% 4%;
-    --primary: 0 61% 17%;
-    --primary-foreground: 60 25% 90%;
-    --muted: 60 20% 85%;
+    --primary: 0 0% 4%;
+    --primary-foreground: 31 44% 94%;
+    --muted: 42 31% 90%;
     --muted-foreground: 30 10% 42%;
-    --destructive: 0 61% 17%;
-    --destructive-foreground: 60 25% 90%;
-    --border: 0 61% 17%;
-    --input: 0 61% 17%;
-    --ring: 0 61% 17%;
+    --destructive: 357 55% 16%;
+    --destructive-foreground: 31 44% 94%;
+    --border: 0 0% 4%;
+    --input: 0 0% 4%;
+    --ring: 0 0% 4%;
     --radius: 0rem;
   }
   * {
@@ -27,10 +27,10 @@
     @apply bg-cream text-ink font-sans font-light antialiased;
   }
   ::selection {
-    @apply bg-oxblood text-cream;
+    @apply bg-ink text-cream;
   }
   :focus-visible {
-    @apply outline-none ring-2 ring-oxblood ring-offset-2 ring-offset-cream;
+    @apply outline-none ring-2 ring-ink ring-offset-2 ring-offset-cream;
   }
 }
 
@@ -46,17 +46,21 @@
     @apply font-serif italic normal-case tracking-normal;
     font-size: 1.08em;
   }
+  /* Heavy sans wordmark and statements, as in the mockup */
+  .display {
+    @apply font-display font-extrabold tracking-[-0.03em] leading-[0.9];
+  }
   .btn {
     @apply inline-flex items-center justify-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] px-7 py-4 border transition-colors duration-300;
   }
-  .btn-oxblood {
-    @apply bg-oxblood text-cream border-oxblood hover:bg-transparent hover:text-oxblood;
+  .btn-ink {
+    @apply bg-ink text-cream border-ink hover:bg-transparent hover:text-ink;
   }
-  .btn-cream {
-    @apply bg-cream text-oxblood border-cream hover:bg-transparent hover:text-cream;
+  .btn-outline {
+    @apply bg-transparent text-ink border-ink/70 hover:bg-ink hover:text-cream hover:border-ink;
   }
   .polaroid {
-    @apply bg-blush p-3 pb-10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.5)];
+    @apply bg-blush p-3 pb-10 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)];
   }
   .photo {
     @apply object-cover;

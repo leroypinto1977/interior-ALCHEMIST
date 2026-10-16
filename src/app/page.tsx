@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ShowcaseGrid from "@/components/ShowcaseGrid";
 import Statement from "@/components/Statement";
 import About from "@/components/About";
-import ShowcaseGrid from "@/components/ShowcaseGrid";
 import Problem from "@/components/Problem";
 import DreamOutcome from "@/components/DreamOutcome";
 import Services from "@/components/Services";
@@ -17,28 +17,40 @@ import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Stripe from "@/components/Stripe";
+
+// Section order follows the mockup; a tricolour stripe sits between every pair.
+const sections = [
+  Hero,
+  ShowcaseGrid,
+  Statement,
+  About,
+  Problem,
+  DreamOutcome,
+  Services,
+  WhyUs,
+  Projects,
+  Process,
+  Differentiation,
+  Testimonials,
+  VideoFeedback,
+  Trust,
+  Team,
+  FAQ,
+  CTA,
+];
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-      <Hero />
-      <Statement />
-      <About />
-      <ShowcaseGrid />
-      <Problem />
-      <DreamOutcome />
-      <Services />
-      <WhyUs />
-      <Projects />
-      <Process />
-      <Differentiation />
-      <Testimonials />
-      <VideoFeedback />
-      <Trust />
-      <Team />
-      <FAQ />
-      <CTA />
+      {sections.map((Section, i) => (
+        <div key={i}>
+          {i > 0 && <Stripe />}
+          <Section />
+        </div>
+      ))}
+      <Stripe />
       <Footer />
     </main>
   );

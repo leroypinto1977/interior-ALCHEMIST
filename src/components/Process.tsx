@@ -1,3 +1,4 @@
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const steps = [
@@ -10,10 +11,12 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="bg-ink text-ivory py-20 md:py-36 px-6 md:px-10" id="process">
+    <section className="relative isolate overflow-hidden bg-cream text-ink py-20 md:py-36 px-6 md:px-10" id="process">
+      <Ornament kind="kaleido" className="left-1/2 -top-20 w-48 md:w-64" />
+      <Ornament kind="lines" className="-right-24 top-24 w-64 md:w-80" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
-          <p className="eyebrow text-ivory/60">Our process</p>
+          <p className="eyebrow text-taupe">Our process</p>
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="headline text-[clamp(2.8rem,6.5vw,6rem)] mt-8 max-w-4xl">
@@ -24,10 +27,10 @@ export default function Process() {
         <ol className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {steps.map((s, i) => (
             <Reveal key={s.title} delay={0.1 + i * 0.1}>
-              <li className="border-l border-ivory/30 pl-5 h-full">
-                <span className="eyebrow text-oxblood-light">Step {String(i + 1).padStart(2, "0")}</span>
+              <li className="border-l border-ink/30 pl-5 h-full">
+                <span className="eyebrow text-ink">Step {String(i + 1).padStart(2, "0")}</span>
                 <h3 className="font-serif text-2xl mt-4">{s.title}</h3>
-                <p className="mt-3 text-ivory/60 leading-relaxed text-sm">{s.text}</p>
+                <p className="mt-3 text-taupe leading-relaxed text-sm">{s.text}</p>
               </li>
             </Reveal>
           ))}

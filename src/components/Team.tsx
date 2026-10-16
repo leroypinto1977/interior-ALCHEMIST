@@ -1,15 +1,18 @@
 import Image from "next/image";
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 export default function Team() {
   return (
-    <section className="bg-cream py-20 md:py-36 px-6" id="team">
+    <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6" id="team">
+      <Ornament kind="kaleido" className="-left-20 top-24 w-64 md:w-80" />
+      <Ornament kind="arcs" className="-right-36 bottom-0 w-[20rem] md:w-[26rem] rotate-180" />
       <div className="max-w-3xl mx-auto text-center">
         <Reveal>
           <p className="eyebrow text-taupe">Meet the founder</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-oxblood text-[clamp(2.8rem,6.5vw,6rem)] mt-8">
+          <h2 className="headline text-ink text-[clamp(2.8rem,6.5vw,6rem)] mt-8">
             The <em>visionary</em> behind the craft
           </h2>
         </Reveal>
@@ -25,7 +28,7 @@ export default function Team() {
                 className="photo"
               />
             </div>
-            <figcaption className="mt-4 font-serif text-3xl text-oxblood">Deepak</figcaption>
+            <figcaption className="mt-4 font-serif text-3xl text-ink">Deepak</figcaption>
           </figure>
         </Reveal>
 
@@ -34,7 +37,7 @@ export default function Team() {
           <p className="mt-6 text-taupe leading-relaxed">
             Deepak established Interior Alchemist with a single-minded vision: to craft bespoke, high-clarity spaces that merge architectural elegance with personal expression. Under his direction the studio turns design challenges into functional art, with an emphasis on sophisticated detail and timeless luxury.
           </p>
-          <ul className="mt-8 flex justify-center gap-8 eyebrow text-oxblood">
+          <ul className="mt-8 flex justify-center gap-8 eyebrow text-ink">
             {["LinkedIn", "Instagram", "Twitter"].map((s) => (
               <li key={s}>
                 <a href="#" className="hover:underline underline-offset-4">

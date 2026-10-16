@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Ornament from "./Ornament";
+import Stripe from "./Stripe";
 
 const links = [
   { name: "Home", href: "/" },
@@ -19,7 +21,10 @@ const strip = [
 
 export default function Footer() {
   return (
-    <footer className="bg-oxblood text-cream">
+    <footer className="relative isolate overflow-hidden bg-sand text-ink">
+      <Ornament kind="lines" className="left-1/2 -translate-x-1/4 bottom-0 w-72 md:w-[26rem] opacity-80" />
+      <Ornament kind="kaleido" className="right-10 bottom-24 w-40 md:w-56" />
+
       <nav className="flex flex-wrap justify-center gap-x-10 gap-y-3 py-8 px-6 eyebrow">
         {links.map((l) => (
           <Link key={l.name} href={l.href} className="hover:underline underline-offset-4">
@@ -30,22 +35,23 @@ export default function Footer() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 px-2">
         {strip.map((src) => (
-          <div key={src} className="group relative aspect-square overflow-hidden">
+          <div key={src} className="group relative aspect-[4/3] overflow-hidden">
             <Image src={src} alt="" fill sizes="25vw" className="photo" />
           </div>
         ))}
       </div>
 
-      <div className="px-6 md:px-10 pt-12 pb-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-        <h2 className="lg:col-span-8 font-serif uppercase leading-[0.82] text-[clamp(3.5rem,11vw,11rem)]">
+      <div className="px-6 md:px-10 pt-10 pb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+        <h2 className="lg:col-span-8 display uppercase text-[clamp(3rem,9vw,9rem)]">
           Interior
           <br />
           Alchemist
         </h2>
-        <div className="lg:col-span-4 flex flex-col lg:items-end gap-6">
+        <div className="lg:col-span-4 flex flex-col lg:items-end gap-5">
           <p className="eyebrow leading-loose max-w-xs lg:text-right">
             India’s first conceptual interior design studio. Design and execution under one roof.
           </p>
+          <span className="h-px w-10 bg-ink/40" />
           <ul className="flex gap-6 eyebrow">
             {["Instagram", "LinkedIn", "Behance"].map((s) => (
               <li key={s}>
@@ -58,13 +64,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="px-6 md:px-10 py-5 border-t border-cream/20 flex flex-col sm:flex-row justify-between gap-3 eyebrow text-cream/70">
+      <div className="px-6 md:px-10 pb-5 flex flex-col sm:flex-row justify-between gap-3 eyebrow text-taupe">
         <span>© {new Date().getFullYear()} Interior Alchemist</span>
         <span className="flex gap-6">
-          <Link href="#" className="hover:text-cream">Privacy</Link>
-          <Link href="#" className="hover:text-cream">Terms</Link>
+          <Link href="#" className="hover:text-ink">Privacy</Link>
+          <Link href="#" className="hover:text-ink">Terms</Link>
         </span>
       </div>
+      <Stripe className="h-1.5" />
     </footer>
   );
 }

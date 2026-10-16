@@ -1,3 +1,4 @@
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const rows = [
@@ -11,34 +12,36 @@ const rows = [
 
 export default function Differentiation() {
   return (
-    <section className="bg-cream py-20 md:py-36 px-6 md:px-10" id="differentiation">
+    <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="differentiation">
+      <Ornament kind="kaleido" className="-left-28 top-1/3 w-64 md:w-80" />
+      <Ornament kind="lines" className="-right-16 bottom-6 w-64 md:w-80" />
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">The difference</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-oxblood text-[clamp(2.8rem,6.5vw,6rem)] mt-8">
+          <h2 className="headline text-ink text-[clamp(2.8rem,6.5vw,6rem)] mt-8">
             The difference is <em>felt</em> immediately
           </h2>
         </Reveal>
 
         <Reveal delay={0.2} className="mt-16">
           {/* Three columns from md up; on phones each row stacks: category, then the two answers */}
-          <div className="hidden md:grid grid-cols-3 gap-x-10 eyebrow border-b border-oxblood pb-4">
+          <div className="hidden md:grid grid-cols-3 gap-x-10 eyebrow border-b border-ink pb-4">
             <span className="text-taupe">Compare</span>
             <span className="text-taupe">Ordinary firms</span>
-            <span className="text-oxblood">Interior Alchemist</span>
+            <span className="text-ink">Interior Alchemist</span>
           </div>
           {rows.map((r) => (
             <div
               key={r.category}
-              className="grid md:grid-cols-3 gap-y-1.5 md:gap-x-10 md:items-baseline py-5 border-b border-oxblood/20 border-t md:border-t-0 first:border-t-0"
+              className="grid md:grid-cols-3 gap-y-1.5 md:gap-x-10 md:items-baseline py-5 border-b border-ink/20 border-t md:border-t-0 first:border-t-0"
             >
               <span className="eyebrow text-taupe">{r.category}</span>
-              <span className="text-taupe/80 line-through decoration-oxblood/40 text-base md:text-lg">
+              <span className="text-taupe/80 line-through decoration-ink/40 text-base md:text-lg">
                 {r.ordinary}
               </span>
-              <span className="font-serif text-2xl md:text-3xl text-oxblood">{r.alchemist}</span>
+              <span className="font-serif text-2xl md:text-3xl text-ink">{r.alchemist}</span>
             </div>
           ))}
         </Reveal>

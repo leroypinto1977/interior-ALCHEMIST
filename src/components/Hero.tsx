@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import Ornament from "./Ornament";
 import { LOADED_KEY } from "./Preloader";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -26,20 +27,14 @@ export default function Hero() {
         };
 
   return (
-    <section className="relative bg-oxblood text-cream overflow-hidden min-h-screen flex flex-col pt-16">
-      <Image
-        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1800&q=80"
-        alt=""
-        fill
-        priority
-        className="object-cover"
-      />
-      {/* Oxblood tint; static layers so the blend is composited once */}
-      <div className="absolute inset-0 bg-oxblood mix-blend-multiply" />
-      <div className="absolute inset-0 bg-oxblood/40" />
+    <section className="relative isolate overflow-hidden bg-cream text-ink min-h-screen flex flex-col pt-16">
+      <Ornament kind="leaf" className="-left-12 top-20 w-72 md:w-[26rem]" />
+      <Ornament kind="arcs" className="-left-24 bottom-0 w-[20rem] md:w-[30rem]" />
+      <Ornament kind="kaleido" className="-right-20 top-10 w-64 md:w-[24rem]" />
+      <Ornament kind="lines" className="right-10 bottom-16 w-56 md:w-80" />
 
-      <div className="relative flex-1 flex flex-col items-center justify-center px-6 py-16 text-center">
-        <h1 className="relative font-serif uppercase leading-[0.82] text-[clamp(4.2rem,16vw,15rem)] tracking-[-0.01em]">
+      <div className="flex-1 flex flex-col items-center justify-center px-6 py-16 text-center">
+        <h1 className="relative display uppercase text-[clamp(3.6rem,13vw,12rem)]">
           <span className="block overflow-hidden">
             <motion.span className="block" {...rise(0)}>
               Interior
@@ -50,44 +45,44 @@ export default function Hero() {
               Alchemist
             </motion.span>
           </span>
-          {/* Tucked into the second line, like the reference's hero */}
+          {/* Polaroid tucked into the second line, as in the mockup */}
           <motion.span
-            className="absolute left-1/2 top-[70%] w-[clamp(64px,10vw,150px)] aspect-[4/5] -translate-x-1/2 -translate-y-1/2 -rotate-6 bg-blush shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
-              initial={{ opacity: 0, scale: 0.6, rotate: -14 }}
-              animate={delay === null ? {} : { opacity: 1, scale: 1, rotate: -6 }}
-              transition={{ duration: 0.8, ease, delay: (delay ?? 0) + 0.7 }}
-            >
-              <span className="absolute inset-1.5 overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&q=80"
-                  alt="Minimalist lounge, Tokyo"
-                  fill
-                  sizes="190px"
-                  className="object-cover"
-                />
-              </span>
-            </motion.span>
+            className="absolute left-1/2 top-[84%] w-[clamp(64px,10vw,150px)] aspect-[4/5] -translate-x-1/2 -translate-y-1/2 -rotate-6 bg-blush shadow-[0_30px_60px_-20px_rgba(0,0,0,0.35)]"
+            initial={{ opacity: 0, scale: 0.6, rotate: -14 }}
+            animate={delay === null ? {} : { opacity: 1, scale: 1, rotate: -6 }}
+            transition={{ duration: 0.8, ease, delay: (delay ?? 0) + 0.7 }}
+          >
+            <span className="absolute inset-1.5 overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&q=80"
+                alt="Minimalist lounge, Tokyo"
+                fill
+                sizes="150px"
+                className="object-cover"
+              />
+            </span>
+          </motion.span>
         </h1>
 
         <motion.div
-          className="mt-12 max-w-xl space-y-7"
+          className="mt-24 md:mt-32 max-w-xl space-y-7"
           initial={{ opacity: 0, y: 16 }}
           animate={delay === null ? {} : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: (delay ?? 0) + 0.9 }}
         >
-          <p className="text-base md:text-lg leading-relaxed text-cream/85">
-            Emotionally refined living spaces for homeowners who want more than ordinary interiors: luxurious, intentional, peaceful, and deeply personal.
+          <p className="text-base md:text-lg leading-relaxed text-ink/80">
+            Emotionally refined living spaces for those who want more than ordinary interiors: luxurious, intentional, peaceful, and deeply personal.
           </p>
-          <Link href="/book" className="btn btn-cream">
+          <Link href="/book" className="btn btn-outline">
             Book your free consultation →
           </Link>
-          <p className="eyebrow text-cream/60">Limited projects each month, to keep execution quality high</p>
+          <p className="eyebrow text-taupe">Limited projects each month, to keep execution quality high</p>
         </motion.div>
       </div>
 
-      <div className="relative px-6 md:px-10 pb-8 flex items-center gap-6 uppercase text-xs md:text-sm tracking-[0.15em]">
+      <div className="px-6 md:px-10 pb-6 flex items-center gap-6 eyebrow">
         <span>Concept studio</span>
-        <span className="flex-1 h-px bg-cream/50" />
+        <span className="flex-1 h-px bg-ink/40" />
         <span>Based in India</span>
       </div>
     </section>

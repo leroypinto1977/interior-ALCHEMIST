@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Ornament from "./Ornament";
 import Reveal from "./Reveal";
 
 const outcomes = [
@@ -11,7 +12,9 @@ const outcomes = [
 
 export default function DreamOutcome() {
   return (
-    <section className="bg-cream py-20 md:py-36 px-6 md:px-10" id="vision">
+    <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="vision">
+      <Ornament kind="kaleido" className="-left-20 top-6 w-64 md:w-80" />
+      <Ornament kind="lines" className="-right-16 bottom-6 w-64 md:w-80" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <Reveal className="lg:col-span-5 flex justify-center">
           <figure className="polaroid -rotate-3 w-[300px] sm:w-[360px] group">
@@ -24,7 +27,7 @@ export default function DreamOutcome() {
                 className="photo"
               />
             </div>
-            <figcaption className="font-serif italic text-xl text-oxblood mt-4 text-center">
+            <figcaption className="font-serif italic text-xl text-ink mt-4 text-center">
               Not just visually impressive. Emotionally right.
             </figcaption>
           </figure>
@@ -35,15 +38,15 @@ export default function DreamOutcome() {
             <p className="eyebrow text-taupe">The outcome</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="headline text-oxblood text-[clamp(2.8rem,6vw,5.5rem)] mt-8">
+            <h2 className="headline text-ink text-[clamp(2.8rem,6vw,5.5rem)] mt-8">
               A home that <em>feels</em> beautiful to experience <em>every</em> single day
             </h2>
           </Reveal>
-          <ul className="mt-12 border-t border-oxblood/20">
+          <ul className="mt-12 border-t border-l border-ink/20 pl-5">
             {outcomes.map((o, i) => (
               <Reveal key={o.title} delay={0.15 + i * 0.06}>
-                <li className="grid sm:grid-cols-[1fr_1.4fr] gap-2 sm:gap-8 py-5 border-b border-oxblood/20">
-                  <h3 className="font-serif text-2xl text-oxblood">{o.title}</h3>
+                <li className="grid sm:grid-cols-[1fr_1.4fr] gap-2 sm:gap-8 py-5 border-b border-ink/20">
+                  <h3 className="font-serif text-2xl text-ink">{o.title}</h3>
                   <p className="text-taupe leading-relaxed">{o.text}</p>
                 </li>
               </Reveal>

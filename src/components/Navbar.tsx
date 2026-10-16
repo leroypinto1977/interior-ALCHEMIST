@@ -23,20 +23,21 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-blush text-oxblood">
+    <header className="fixed inset-x-0 top-0 z-50 bg-cream text-ink">
       <div className="flex items-center justify-between h-16 px-5 md:px-10">
-        <Link href="/" className="font-serif text-xl md:text-2xl uppercase tracking-tight whitespace-nowrap" onClick={() => setOpen(false)}>
-          Interior Alchemist
+        <Link href="/" className="leading-none text-ink whitespace-nowrap" onClick={() => setOpen(false)} aria-label="Interior Alchemist home">
+          <span className="block font-sans font-light lowercase text-[13px] tracking-[0.14em]">interior</span>
+          <span className="block font-sans font-light uppercase text-[17px] tracking-[0.04em] -mt-0.5">Alchemist</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-10">
           {links.map((l) => (
             <Link key={l.name} href={l.href} className="eyebrow relative py-1 group">
               {l.name}
-              <span className="absolute left-0 -bottom-0.5 h-px w-full bg-oxblood scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
+              <span className="absolute left-0 -bottom-0.5 h-px w-full bg-ink scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
             </Link>
           ))}
-          <Link href="/book" className="btn btn-oxblood !py-2.5 !px-5">
+          <Link href="/book" className="btn btn-ink !py-2.5 !px-5">
             Book a consultation
           </Link>
         </nav>
@@ -58,7 +59,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.35 }}
-            className="lg:hidden fixed inset-0 top-16 bg-oxblood text-cream flex flex-col px-6 pt-10"
+            className="lg:hidden fixed inset-0 top-16 bg-cream text-ink flex flex-col px-6 pt-10"
           >
             {links.map((l, i) => (
               <motion.div
@@ -66,14 +67,14 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.08 * i }}
-                className="border-b border-cream/20"
+                className="border-b border-ink/20"
               >
                 <Link href={l.href} onClick={() => setOpen(false)} className="font-serif text-4xl py-4 block">
                   {l.name}
                 </Link>
               </motion.div>
             ))}
-            <Link href="/book" onClick={() => setOpen(false)} className="btn btn-cream mt-10 self-start">
+            <Link href="/book" onClick={() => setOpen(false)} className="btn btn-ink mt-10 self-start">
               Book a consultation
             </Link>
           </motion.nav>
