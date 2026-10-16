@@ -17,7 +17,6 @@ import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import Stripe from "@/components/Stripe";
 
 type Entry = {
   C: () => JSX.Element;
@@ -56,7 +55,6 @@ export default function Home() {
           // ponytail: pins from md up only; on phones these sections are taller than the screen and would hide their lower half
           return (
             <div key={i} className="md:sticky md:top-0">
-              {i > 0 && <Stripe />}
               <C />
             </div>
           );
@@ -70,12 +68,10 @@ export default function Home() {
         }
         return (
           <div key={i} className="relative">
-            <Stripe />
             <C />
           </div>
         );
       })}
-      <Stripe />
       <Footer />
     </main>
   );

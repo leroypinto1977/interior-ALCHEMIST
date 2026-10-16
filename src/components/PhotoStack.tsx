@@ -28,7 +28,7 @@ export default function PhotoStack({ className, delay = 0 }: { className?: strin
 
   useEffect(() => {
     if (reduce) return;
-    const id = setInterval(() => setCount((c) => c + 1), 3200);
+    const id = setInterval(() => setCount((c) => c + 1), 3000);
     return () => clearInterval(id);
   }, [reduce]);
 
@@ -58,8 +58,8 @@ export default function PhotoStack({ className, delay = 0 }: { className?: strin
               style={{ zIndex: i }}
               initial={{ x: 70, y: -110, rotate: 16, scale: 1.06, opacity: 0 }}
               animate={{ ...slots[i], opacity: 1 }}
-              exit={{ x: -40, y: 50, rotate: -22, opacity: 0, transition: { duration: 0.45, ease } }}
-              transition={{ type: "spring", stiffness: 210, damping: 22, mass: 0.9 }}
+              exit={{ x: -40, y: 50, rotate: -22, opacity: 0, transition: { duration: 0.35, ease } }}
+              transition={{ type: "spring", stiffness: 320, damping: 26, mass: 0.7 }}
             >
               <span className="relative block h-full w-full overflow-hidden">
                 <Image src={photo.src} alt={photo.alt} fill sizes="240px" className="object-cover" />

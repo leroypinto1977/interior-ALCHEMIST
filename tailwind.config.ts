@@ -12,7 +12,8 @@ const config = {
         ink: "#0B0B0B",
         taupe: "#766B60",
         ornament: "#E3D9CC", // background line art
-        oxblood: "#3F1214", // section stripe only
+        oxblood: "#3F1214", // maroon section background
+        maroon: "#6E1F24", // brighter maroon for thin lines, where oxblood reads as black
         gold: "#B19462",
         stone: "#BDB3A3",
         ivory: "#F3F2EC",
