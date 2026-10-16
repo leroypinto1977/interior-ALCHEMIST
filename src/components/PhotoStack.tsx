@@ -28,7 +28,7 @@ export default function PhotoStack({ className, delay = 0 }: { className?: strin
 
   useEffect(() => {
     if (reduce) return;
-    const id = setInterval(() => setCount((c) => c + 1), 3000);
+    const id = setInterval(() => setCount((c) => c + 1), 1500);
     return () => clearInterval(id);
   }, [reduce]);
 
