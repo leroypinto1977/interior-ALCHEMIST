@@ -1,42 +1,36 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 const images = [
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-  "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&q=80",
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80",
+  { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80", alt: "Japandi dining, Kyoto" },
+  { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80", alt: "Modernist villa, Zurich" },
+  { src: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=700&q=80", alt: "Living room" },
+  { src: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=700&q=80", alt: "Bright loft, Berlin" },
+  { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80", alt: "Villa pool, Miami" },
+  { src: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=700&q=80", alt: "Zen entryway, Seattle" },
 ];
 
+// Photo strip over a marquee of the wordmark.
 export default function ShowcaseGrid() {
+  const word = Array(4).fill("Interior Alchemist").join("  —  ");
   return (
-    <section className="hidden md:block py-12 overflow-hidden bg-[#0a0a0a]">
-      <div className="flex justify-center items-end gap-4 px-4 min-w-max md:min-w-0">
-        {images.map((src, i) => {
-          // Create an alternating height pattern to mimic the reference image
-          const heights = ["h-[200px]", "h-[300px]", "h-[250px]", "h-[320px]", "h-[220px]"];
-          
-          return (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`relative w-[180px] sm:w-[220px] md:w-[260px] ${heights[i]} rounded-t-full rounded-b-3xl overflow-hidden shrink-0 group`}
-            >
-              <Image 
-                src={src}
-                alt={`Showcase ${i + 1}`}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
-              />
-            </motion.div>
-          );
-        })}
+    <section className="relative bg-ink py-16 md:py-24 overflow-hidden">
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex whitespace-nowrap font-serif uppercase text-oxblood text-[clamp(7rem,22vw,20rem)] leading-none select-none"
+      >
+        <span className="animate-marquee-left pr-8">{word}&nbsp;&nbsp;—&nbsp;&nbsp;</span>
+        <span className="animate-marquee-left pr-8">{word}&nbsp;&nbsp;—&nbsp;&nbsp;</span>
+      </div>
+
+      <div className="relative flex gap-4 md:gap-5 px-6 overflow-x-auto md:overflow-visible md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {images.map((img, i) => (
+          <Reveal key={img.src} delay={i * 0.08} className={`shrink-0 ${i % 2 ? "md:mt-10" : ""}`}>
+            <div className="group relative w-[210px] md:w-[230px] lg:w-[260px] aspect-[3/4] overflow-hidden">
+              <Image src={img.src} alt={img.alt} fill sizes="260px" className="photo" />
+            </div>
+          </Reveal>
+        ))}
       </div>
     </section>
   );

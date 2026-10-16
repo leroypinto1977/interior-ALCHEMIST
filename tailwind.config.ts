@@ -1,34 +1,21 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  prefix: "",
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
+      // Brand palette (sampled from midnightmavenagency.showit.site)
       colors: {
-        // Brand palette (sampled from midnightmavenagency.showit.site)
         oxblood: {
           DEFAULT: "#461111",
-          // lifted oxblood for small text/icons on black (base is too dark to read)
+          // lifted oxblood for small text on black
           light: "#C47A7A",
         },
         cream: "#ECECDF",
         ivory: "#F3F2EC",
         blush: "#FEF6F6",
         taupe: "#766B60",
+        ink: "#0B0B0B",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -38,35 +25,20 @@ const config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+      fontFamily: {
+        sans: ["var(--font-sans)", "sans-serif"],
+        serif: ["var(--font-serif)", "serif"],
+        condensed: ["var(--font-condensed)", "sans-serif"],
+        mono: ["var(--font-mono)", "monospace"],
       },
       keyframes: {
         "accordion-down": {
@@ -76,14 +48,6 @@ const config = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
-        },
-        "marquee-up": {
-          "0%": { transform: "translate3d(0, 0, 0)" },
-          "100%": { transform: "translate3d(0, -50%, 0)" },
-        },
-        "marquee-down": {
-          "0%": { transform: "translate3d(0, -50%, 0)" },
-          "100%": { transform: "translate3d(0, 0, 0)" },
         },
         "marquee-left": {
           "0%": { transform: "translate3d(0, 0, 0)" },
@@ -97,10 +61,8 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "marquee-up": "marquee-up 30s linear infinite",
-        "marquee-down": "marquee-down 30s linear infinite",
-        "marquee-left": "marquee-left 25s linear infinite",
-        "marquee-right": "marquee-right 25s linear infinite",
+        "marquee-left": "marquee-left 40s linear infinite",
+        "marquee-right": "marquee-right 40s linear infinite",
       },
     },
   },
