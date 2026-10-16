@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
-import { maskStyle } from "./Ornament";
+import { maskStyle } from "@/lib/mask";
 
 // The client's logo (from FINAL LOGO FILE.eps), stored as alpha masks so it takes any colour via `bg-*`.
 const variants = {
   full: { file: "/logo.png", ratio: "1212 / 1066" },
-  mark: { file: "/ornaments/mark.png", ratio: "1196 / 594" },
+  mark: { file: "/logo-mark.png", ratio: "1196 / 594" },
   wordmark: { file: "/logo-wordmark.png", ratio: "1204 / 446" },
 };
 

@@ -1,4 +1,4 @@
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 const points = [
@@ -13,8 +13,7 @@ const points = [
 export default function Trust() {
   return (
     <section className="relative isolate overflow-hidden bg-sand py-20 md:py-36 px-6 md:px-10" id="trust">
-      <Ornament kind="arcs" className="-left-36 -top-10 w-[20rem] md:w-[26rem]" />
-      <Ornament kind="kaleido" className="-right-16 top-10 w-64 md:w-80" />
+      <Backdrop />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
         <div className="lg:col-span-6">
           <Reveal>

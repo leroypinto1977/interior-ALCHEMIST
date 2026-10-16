@@ -26,20 +26,21 @@ type Entry = {
   over?: boolean;
 };
 
+// Four locks. The two maroon sections (Problem, Testimonials) are the ones that roll over with rounded tops.
 const sections: Entry[] = [
   { C: Hero, lock: true },
   { C: ShowcaseGrid, over: true },
   { C: Statement },
-  { C: About },
-  { C: Problem, lock: true },
-  { C: DreamOutcome, over: true },
+  { C: About, lock: true },
+  { C: Problem, over: true },
+  { C: DreamOutcome },
   { C: Services },
-  { C: WhyUs },
-  { C: Projects },
+  { C: WhyUs, lock: true },
+  { C: Projects, over: true },
   { C: Process },
-  { C: Differentiation },
-  { C: Testimonials, lock: true },
-  { C: VideoFeedback, over: true },
+  { C: Differentiation, lock: true },
+  { C: Testimonials, over: true },
+  { C: VideoFeedback },
   { C: Trust },
   { C: Team },
   { C: FAQ },

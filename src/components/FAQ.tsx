@@ -1,4 +1,4 @@
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 const faqs = [
@@ -31,8 +31,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="faq">
-      <Ornament kind="kaleido" className="-left-24 bottom-10 w-56 md:w-72" />
-      <Ornament kind="arcs" className="-right-44 -top-28 w-[22rem] md:w-[28rem] rotate-180" />
+      <Backdrop />
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4 border-l border-ink/40 pl-5">
           <Reveal>

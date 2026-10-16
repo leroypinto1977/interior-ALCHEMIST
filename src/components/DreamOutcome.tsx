@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 const outcomes = [
@@ -13,8 +13,7 @@ const outcomes = [
 export default function DreamOutcome() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="vision">
-      <Ornament kind="kaleido" className="-left-20 top-6 w-64 md:w-80" />
-      <Ornament kind="lines" className="-right-16 bottom-6 w-64 md:w-80" />
+      <Backdrop />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <Reveal className="lg:col-span-5 flex justify-center">
           <figure className="polaroid -rotate-3 w-[300px] sm:w-[360px] group">

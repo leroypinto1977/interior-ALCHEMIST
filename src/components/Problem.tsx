@@ -1,4 +1,4 @@
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 const painPoints = [
@@ -13,8 +13,7 @@ const painPoints = [
 export default function Problem() {
   return (
     <section className="relative isolate overflow-hidden bg-oxblood text-cream py-20 md:py-36 px-6 md:px-10" id="challenges">
-      <Ornament kind="arcs" className="bg-cream opacity-10 -left-44 top-1/4 w-[22rem] md:w-[32rem]" />
-      <Ornament kind="kaleido" className="bg-cream opacity-10 right-6 -top-12 w-56 md:w-72" />
+      <Backdrop tone="cream" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20">
         <div className="lg:col-span-5">
           <Reveal>

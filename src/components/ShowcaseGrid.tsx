@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 import Stripe from "./Stripe";
 
@@ -17,9 +17,7 @@ export default function ShowcaseGrid() {
   const word = Array(4).fill("The lifestyle").join("    ");
   return (
     <section className="relative isolate overflow-hidden bg-sand pt-6 pb-14 md:pb-20">
-      <Ornament kind="lines" className="left-1/2 -translate-x-1/2 -top-24 w-64 opacity-70" />
-      <Ornament kind="kaleido" className="left-4 top-1/2 w-32 md:w-44" />
-      <Ornament kind="kaleido" className="right-4 top-1/2 w-32 md:w-44" />
+      <Backdrop />
 
       <div aria-hidden className="flex whitespace-nowrap display uppercase text-[clamp(3.6rem,10vw,9rem)] text-ink select-none">
         <span className="animate-marquee-left pr-8">{word}&nbsp;&nbsp;&nbsp;&nbsp;</span>

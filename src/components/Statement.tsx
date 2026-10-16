@@ -1,12 +1,11 @@
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 // The one-line thesis, set heavy, as in the mockup.
 export default function Statement() {
   return (
     <section className="relative isolate overflow-hidden bg-cream text-ink">
-      <Ornament kind="kaleido" className="-right-16 -top-10 w-72 md:w-[26rem]" />
-      <Ornament kind="lines" className="right-20 bottom-0 w-56 md:w-80" />
+      <Backdrop />
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-40">
         <Reveal>
           <p className="eyebrow text-ink/70 max-w-xs leading-loose">

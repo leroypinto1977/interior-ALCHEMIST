@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { Play, X } from "lucide-react";
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 const feedbacks = [
@@ -35,8 +35,7 @@ export default function VideoFeedback() {
 
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="video-feedbacks">
-      <Ornament kind="lines" className="-right-20 -top-6 w-64 md:w-80" />
-      <Ornament kind="kaleido" className="-left-20 bottom-6 w-56 md:w-72" />
+      <Backdrop />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">Video reviews</p>

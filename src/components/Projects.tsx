@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 const projects = [
@@ -30,8 +30,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="relative isolate overflow-hidden bg-sand py-20 md:py-36 px-6 md:px-10" id="portfolio">
-      <Ornament kind="kaleido" className="-left-24 top-16 w-56 md:w-72" />
-      <Ornament kind="kaleido" className="-right-28 bottom-6 w-72 md:w-96" />
+      <Backdrop />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-7">
           <Reveal>

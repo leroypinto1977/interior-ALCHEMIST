@@ -1,4 +1,4 @@
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 const reasons = [
@@ -13,8 +13,7 @@ const reasons = [
 export default function WhyUs() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="why-us">
-      <Ornament kind="kaleido" className="-right-20 top-4 w-64 md:w-80" />
-      <Ornament kind="arcs" className="-left-40 -bottom-40 w-[22rem] md:w-[26rem]" />
+      <Backdrop />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">Why us</p>

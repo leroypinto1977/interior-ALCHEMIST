@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import PhotoStack from "./PhotoStack";
 import { LOADED_KEY } from "./Preloader";
 
@@ -28,14 +28,10 @@ export default function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-cream text-ink min-h-screen flex flex-col pt-16">
-      <Ornament kind="leaf" className="-left-10 top-24 w-56 md:w-80" />
-      <Ornament kind="arcs" className="-left-6 bottom-0 w-40 md:w-64" />
-      <Ornament kind="mark" className="right-[8%] top-[38%] w-56 md:w-96" />
-      <Ornament kind="kaleido" className="-right-10 -top-6 w-40 md:w-64" />
-      <Ornament kind="lines" className="right-0 bottom-10 w-64 md:w-[26rem]" />
+      <Backdrop />
 
-      <div className="flex-1 flex flex-col items-center justify-center px-6 py-16 text-center">
-        <h1 className="relative display uppercase text-[clamp(3.6rem,13vw,12rem)]">
+      <div className="flex-1 flex flex-col items-center justify-center px-6 pt-12 pb-10 text-center">
+        <h1 className="display uppercase text-[clamp(3.6rem,13vw,12rem)]">
           <span className="block overflow-hidden">
             <motion.span className="block" {...rise(0)}>
               Interior
@@ -46,15 +42,16 @@ export default function Hero() {
               Alchemist
             </motion.span>
           </span>
-          {/* Pile of polaroids tucked into the second line; a new one lands every few seconds */}
-          <PhotoStack
-            className="absolute left-1/2 top-[86%] w-[clamp(84px,11vw,170px)] -translate-x-1/2 -translate-y-1/2"
-            delay={(delay ?? 0) + 0.7}
-          />
         </h1>
 
+        {/* Pile of polaroids tucked under the wordmark; a new one lands every few seconds */}
+        <PhotoStack
+          className="-mt-6 md:-mt-10 w-[clamp(120px,15vw,220px)]"
+          delay={(delay ?? 0) + 0.7}
+        />
+
         <motion.div
-          className="mt-24 md:mt-32 max-w-xl space-y-7"
+          className="mt-10 md:mt-12 max-w-xl space-y-7"
           initial={{ opacity: 0, y: 16 }}
           animate={delay === null ? {} : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: (delay ?? 0) + 0.9 }}

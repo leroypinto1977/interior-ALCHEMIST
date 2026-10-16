@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Ornament from "./Ornament";
+import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 const testimonials = [
@@ -29,8 +29,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="relative isolate overflow-hidden bg-oxblood text-cream py-20 md:py-36 px-6 md:px-10" id="testimonials">
-      <Ornament kind="lines" className="bg-cream opacity-10 -right-12 top-6 w-56 md:w-72" />
-      <Ornament kind="kaleido" className="bg-cream opacity-10 left-1/2 bottom-0 w-40 md:w-56" />
+      <Backdrop tone="cream" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="flex items-center gap-6 eyebrow text-cream/70">
