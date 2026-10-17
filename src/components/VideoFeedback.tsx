@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { Play, X } from "lucide-react";
 import Reveal from "./Reveal";
+import Shape from "./Shape";
 
 const feedbacks = [
   {
@@ -34,6 +35,7 @@ export default function VideoFeedback() {
 
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="video-feedbacks">
+      <Shape kind="leaf" className="-right-6 top-16 w-[clamp(130px,14vw,220px)] rotate-6" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">Video reviews</p>

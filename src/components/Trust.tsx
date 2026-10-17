@@ -1,5 +1,6 @@
 import ArcSeam from "./ArcSeam";
 import Reveal from "./Reveal";
+import Shape from "./Shape";
 
 const points = [
   "Detailed scope clarity",
@@ -13,6 +14,7 @@ const points = [
 export default function Trust() {
   return (
     <section className="relative isolate overflow-hidden bg-sand py-20 md:py-36 px-6 md:px-10" id="trust">
+      <Shape kind="star" className="right-[4%] top-10 w-[clamp(90px,9vw,140px)]" />
       <ArcSeam half="top" side="left" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
         <div className="lg:col-span-6">

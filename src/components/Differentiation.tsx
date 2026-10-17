@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import Shape from "./Shape";
 
 const rows = [
   { category: "Approach", ordinary: "Furniture-focused", alchemist: "Experience-focused" },
@@ -12,6 +13,7 @@ const rows = [
 export default function Differentiation() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="differentiation">
+      <Shape kind="hatching" className="right-[4%] top-10 w-[clamp(180px,20vw,300px)]" />
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">The difference</p>

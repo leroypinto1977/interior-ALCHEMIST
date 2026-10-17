@@ -14,7 +14,7 @@ export default function Shape({ kind, className }: { kind: keyof typeof shapes; 
   return (
     <span
       aria-hidden
-      className={cn("pointer-events-none absolute -z-10 block bg-taupe/20", className)}
+      className={cn("pointer-events-none absolute -z-10 block bg-taupe/25", className)}
       style={maskStyle(file, ratio)}
     />
   );

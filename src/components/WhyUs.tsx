@@ -13,6 +13,7 @@ const reasons = [
 export default function WhyUs() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="why-us">
+      <Shape kind="leaf" className="right-[5%] top-12 w-[clamp(120px,12vw,190px)] -scale-x-100" />
       <Shape kind="hatching" className="right-[4%] bottom-10 w-[clamp(200px,24vw,360px)]" />
       <div className="max-w-7xl mx-auto">
         <Reveal>

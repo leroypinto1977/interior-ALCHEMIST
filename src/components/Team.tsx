@@ -1,10 +1,12 @@
 import Image from "next/image";
 import ArcSeam from "./ArcSeam";
 import Reveal from "./Reveal";
+import Shape from "./Shape";
 
 export default function Team() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6" id="team">
+      <Shape kind="leaf" className="right-[6%] bottom-16 w-[clamp(130px,14vw,220px)] -scale-x-100" />
       <ArcSeam half="bottom" side="left" />
       <div className="max-w-3xl mx-auto text-center">
         <Reveal>

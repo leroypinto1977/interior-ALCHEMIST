@@ -1,5 +1,6 @@
 import ArcSeam from "./ArcSeam";
 import Reveal from "./Reveal";
+import Shape from "./Shape";
 
 const proof = [
   { value: "12+", label: "Years experience" },
@@ -19,6 +20,7 @@ const trust = [
 export default function About() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6" id="about">
+      <Shape kind="star" className="right-[4%] bottom-16 w-[clamp(90px,9vw,140px)]" />
       <ArcSeam half="bottom" side="left" />
       <div className="max-w-5xl mx-auto text-center">
         <Reveal>

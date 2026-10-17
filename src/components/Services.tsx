@@ -1,5 +1,6 @@
 import ArcSeam from "./ArcSeam";
 import Reveal from "./Reveal";
+import Shape from "./Shape";
 
 const benefits = [
   { title: <><em>Beautifully</em> personalized</>, text: "Spaces tailored to your lifestyle and aesthetic." },
@@ -11,6 +12,7 @@ const benefits = [
 export default function Services() {
   return (
     <section className="relative isolate overflow-hidden bg-sand text-ink py-20 md:py-32 px-6 md:px-10" id="services">
+      <Shape kind="leaf" className="-left-6 bottom-6 w-[clamp(130px,14vw,220px)] -rotate-6" />
       <ArcSeam half="bottom" side="right" />
       <div className="max-w-7xl mx-auto">
         <Reveal>

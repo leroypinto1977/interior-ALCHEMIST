@@ -12,6 +12,7 @@ const steps = [
 export default function Process() {
   return (
     <section className="relative isolate overflow-hidden bg-cream text-ink py-20 md:py-36 px-6 md:px-10" id="process">
+      <Shape kind="star" className="right-[5%] top-12 w-[clamp(90px,9vw,140px)]" />
       <Shape kind="leaf" className="-left-8 bottom-6 w-[clamp(140px,15vw,240px)] -rotate-12" />
       <div className="max-w-7xl mx-auto">
         <Reveal>

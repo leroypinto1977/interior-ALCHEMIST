@@ -29,6 +29,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="relative isolate overflow-hidden bg-oxblood text-cream py-20 md:py-36 px-6 md:px-10" id="testimonials">
+      <Shape kind="star" className="bg-cream/10 right-[5%] top-4 w-[clamp(70px,7vw,110px)]" />
       <Shape kind="hatching" className="bg-cream/10 left-[4%] bottom-8 w-[clamp(180px,20vw,300px)]" />
       <div className="max-w-7xl mx-auto">
         <Reveal>

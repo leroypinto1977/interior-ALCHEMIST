@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ArcSeam from "./ArcSeam";
 import Reveal from "./Reveal";
+import Shape from "./Shape";
 
 const outcomes = [
   { title: "Intentional details", text: "Walk into a home where every finish and element feels like it belongs." },
@@ -13,6 +14,7 @@ const outcomes = [
 export default function DreamOutcome() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="vision">
+      <Shape kind="star" className="left-[3%] top-10 w-[clamp(80px,8vw,130px)]" />
       <ArcSeam half="top" side="right" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <Reveal className="lg:col-span-5 flex justify-center">
