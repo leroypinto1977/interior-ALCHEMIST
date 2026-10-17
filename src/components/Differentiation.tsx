@@ -1,4 +1,3 @@
-import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 const rows = [
@@ -13,7 +12,6 @@ const rows = [
 export default function Differentiation() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="differentiation">
-      <Backdrop />
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">The difference</p>

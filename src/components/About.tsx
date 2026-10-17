@@ -1,4 +1,4 @@
-import Backdrop from "./Backdrop";
+import ArcSeam from "./ArcSeam";
 import Reveal from "./Reveal";
 
 const proof = [
@@ -19,7 +19,7 @@ const trust = [
 export default function About() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6" id="about">
-      <Backdrop />
+      <ArcSeam half="bottom" side="left" />
       <div className="max-w-5xl mx-auto text-center">
         <Reveal>
           <p className="eyebrow text-taupe">About Interior Alchemist</p>

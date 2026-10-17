@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "./Logo";
-import Backdrop from "./Backdrop";
 import Stripe from "./Stripe";
 
 const links = [
@@ -23,7 +22,6 @@ const strip = [
 export default function Footer() {
   return (
     <footer className="relative isolate overflow-hidden bg-sand text-ink">
-      <Backdrop />
 
       <nav className="flex flex-wrap justify-center gap-x-10 gap-y-3 py-8 px-6 eyebrow">
         {links.map((l) => (

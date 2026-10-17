@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Backdrop from "./Backdrop";
 import Reveal from "./Reveal";
 
 // Real projects from the studio's 3D presentations; homeowners' names are left out.
@@ -34,7 +33,6 @@ const projects = [
 export default function Projects() {
   return (
     <section className="relative isolate overflow-hidden bg-sand py-20 md:py-36 px-6 md:px-10" id="portfolio">
-      <Backdrop />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-7">
           <Reveal>

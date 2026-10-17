@@ -1,4 +1,4 @@
-import Backdrop from "./Backdrop";
+import ArcSeam from "./ArcSeam";
 import Reveal from "./Reveal";
 
 const benefits = [
@@ -11,7 +11,7 @@ const benefits = [
 export default function Services() {
   return (
     <section className="relative isolate overflow-hidden bg-sand text-ink py-20 md:py-32 px-6 md:px-10" id="services">
-      <Backdrop />
+      <ArcSeam half="bottom" side="right" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="flex items-center gap-6 eyebrow">

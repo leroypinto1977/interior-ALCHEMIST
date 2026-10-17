@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Backdrop from "./Backdrop";
+import Shape from "./Shape";
 import Reveal from "./Reveal";
 
 const testimonials = [
@@ -29,7 +29,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="relative isolate overflow-hidden bg-oxblood text-cream py-20 md:py-36 px-6 md:px-10" id="testimonials">
-      <Backdrop tone="cream" />
+      <Shape kind="hatching" className="bg-cream/10 left-[4%] bottom-8 w-[clamp(180px,20vw,300px)]" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="flex items-center gap-6 eyebrow text-cream/70">
