@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-cream text-ink min-h-screen flex flex-col pt-16">
       <Shape kind="leaf" className="-right-10 top-20 w-[clamp(180px,22vw,340px)]" />
-      <Shape kind="star" className="left-[5%] bottom-24 w-[clamp(90px,10vw,150px)]" />
+      <Shape kind="pinwheel" className="left-[5%] bottom-24 w-[clamp(90px,10vw,150px)]" />
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 pt-12 pb-10 text-center">
         <h1 className="display uppercase text-[clamp(3.6rem,13vw,12rem)]">

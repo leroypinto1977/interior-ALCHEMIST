@@ -31,7 +31,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="faq">
-      <Shape kind="star" className="right-[4%] bottom-10 w-[clamp(90px,9vw,140px)]" />
+      <Shape kind="hatch-circle" className="right-[4%] bottom-10 w-[clamp(90px,9vw,140px)]" />
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4 border-l border-ink/40 pl-5">
           <Reveal>

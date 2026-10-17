@@ -14,7 +14,7 @@ export default function Problem() {
   return (
     <section className="relative isolate overflow-hidden bg-oxblood text-cream py-20 md:py-36 px-6 md:px-10" id="challenges">
       <Shape kind="hatching" className="bg-cream/10 left-[4%] bottom-10 w-[clamp(180px,20vw,300px)]" />
-      <Shape kind="star" className="bg-cream/10 right-[6%] top-14 w-[clamp(110px,12vw,190px)]" />
+      <Shape kind="waves" className="bg-cream/15 -right-6 -top-6 w-[clamp(150px,16vw,250px)]" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20">
         <div className="lg:col-span-5">
           <Reveal>
