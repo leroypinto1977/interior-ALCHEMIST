@@ -50,25 +50,11 @@ export default function Footer() {
           <p className="eyebrow leading-loose max-w-xs lg:text-right">
             India’s first conceptual interior design studio. Design and execution under one roof.
           </p>
-          <span className="h-px w-10 bg-ink/40" />
-          <ul className="flex gap-6 eyebrow">
-            {["Instagram", "LinkedIn", "Behance"].map((s) => (
-              <li key={s}>
-                <a href="#" className="hover:underline underline-offset-4">
-                  {s}
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
 
-      <div className="px-6 md:px-10 pb-5 flex flex-col sm:flex-row justify-between gap-3 eyebrow text-taupe">
+      <div className="px-6 md:px-10 pb-5 eyebrow text-taupe">
         <span>© {new Date().getFullYear()} Interior Alchemist</span>
-        <span className="flex gap-6">
-          <Link href="#" className="hover:text-ink">Privacy</Link>
-          <Link href="#" className="hover:text-ink">Terms</Link>
-        </span>
       </div>
       <Stripe className="h-1.5" />
     </footer>
