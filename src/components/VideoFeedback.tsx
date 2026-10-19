@@ -7,24 +7,23 @@ import { Play, X } from "lucide-react";
 import Reveal from "./Reveal";
 import Shape from "./Shape";
 
-const feedbacks = [
+// Add a `videoUrl` to a client to give its card a play button and open the video modal.
+// The old Vimeo links returned 403, so no client has a video yet.
+const feedbacks: { name: string; role: string; thumbnail: string; videoUrl?: string }[] = [
   {
     name: "Krishna",
     role: "Hair stylist · Owner of Page 3 – KNK",
     thumbnail: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80",
-    videoUrl: "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c02cba73d11dbf14c02099b244e4e9a0&profile_id=139&oauth2_token_id=57447761",
   },
   {
     name: "Ananya Sharma",
     role: "Creative director · Studio Design Co.",
     thumbnail: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
-    videoUrl: "https://player.vimeo.com/external/435674703.sd.mp4?s=7facdc735adbb1b4353d47d0579021577fae5550&profile_id=139&oauth2_token_id=57447761",
   },
   {
     name: "Rohan Mehta",
     role: "Founder · Vertex Labs",
     thumbnail: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-    videoUrl: "https://player.vimeo.com/external/517602126.sd.mp4?s=6a2b8e5c5457ef4599587425175c2e1762c4a9fb&profile_id=139&oauth2_token_id=57447761",
   },
 ];
 
@@ -47,26 +46,30 @@ export default function VideoFeedback() {
         </Reveal>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-          {feedbacks.map((f, i) => (
+          {feedbacks.map((f, i) => {
+            const Card = f.videoUrl ? "button" : "div";
+            return (
             <Reveal key={f.name} delay={i * 0.1}>
-              <button
-                onClick={() => setActive(f)}
+              <Card
+                {...(f.videoUrl && { onClick: () => setActive(f), "aria-label": `Play video review from ${f.name}` })}
                 className={`polaroid ${tilt[i]} w-full max-w-[340px] mx-auto block text-left group hover:rotate-0 transition-transform duration-500`}
-                aria-label={`Play video review from ${f.name}`}
               >
                 <span className="relative block aspect-[4/5] overflow-hidden">
                   <Image src={f.thumbnail} alt="" fill sizes="340px" className="photo" />
-                  <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="w-16 h-16 rounded-full bg-cream/90 text-ink flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Play className="w-6 h-6 fill-current translate-x-0.5" />
+                  {f.videoUrl && (
+                    <span className="absolute inset-0 flex items-center justify-center">
+                      <span className="w-16 h-16 rounded-full bg-cream/90 text-ink flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <Play className="w-6 h-6 fill-current translate-x-0.5" />
+                      </span>
                     </span>
-                  </span>
+                  )}
                 </span>
                 <span className="block mt-4 font-serif text-2xl text-ink">{f.name}</span>
                 <span className="block eyebrow text-taupe mt-1">{f.role}</span>
-              </button>
+              </Card>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
       </div>
 
