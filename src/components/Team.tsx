@@ -38,15 +38,6 @@ export default function Team() {
           <p className="mt-6 text-taupe leading-relaxed">
             Deepak established Interior Alchemist with a single-minded vision: to craft bespoke, high-clarity spaces that merge architectural elegance with personal expression. Under his direction the studio turns design challenges into functional art, with an emphasis on sophisticated detail and timeless luxury.
           </p>
-          <ul className="mt-8 flex justify-center gap-8 eyebrow text-ink">
-            {["LinkedIn", "Instagram", "Twitter"].map((s) => (
-              <li key={s}>
-                <a href="#" className="hover:underline underline-offset-4">
-                  {s}
-                </a>
-              </li>
-            ))}
-          </ul>
         </Reveal>
       </div>
     </section>
