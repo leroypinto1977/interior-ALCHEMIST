@@ -32,7 +32,7 @@ export default function Hero() {
       <Shape kind="pinwheel" className="left-[5%] bottom-24 w-[clamp(90px,10vw,150px)]" />
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 pt-12 pb-10 text-center">
-        <h1 className="display uppercase text-[clamp(3.6rem,13vw,12rem)]">
+        <h1 className="display uppercase text-[clamp(2.6rem,13.5vw,12rem)]">
           <span className="block overflow-hidden">
             <motion.span className="block" {...rise(0)}>
               Interior

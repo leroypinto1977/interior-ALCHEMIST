@@ -23,9 +23,9 @@ export default function Footer() {
   return (
     <footer className="relative isolate overflow-hidden bg-sand text-ink">
 
-      <nav className="flex flex-wrap justify-center gap-x-10 gap-y-3 py-8 px-6 eyebrow">
+      <nav className="flex flex-wrap justify-center gap-x-8 gap-y-1 py-6 px-6 eyebrow">
         {links.map((l) => (
-          <Link key={l.name} href={l.href} className="hover:underline underline-offset-4">
+          <Link key={l.name} href={l.href} className="py-3 hover:underline underline-offset-4">
             {l.name}
           </Link>
         ))}
@@ -34,13 +34,13 @@ export default function Footer() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 px-2">
         {strip.map((img) => (
           <div key={img.src} className="group relative aspect-[4/3] overflow-hidden">
-            <Image src={img.src} alt={img.alt} fill sizes="25vw" className="photo" />
+            <Image src={img.src} alt={img.alt} fill sizes="(min-width: 768px) 25vw, 50vw" className="photo" />
           </div>
         ))}
       </div>
 
       <div className="px-6 md:px-10 pt-10 pb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-        <h2 className="lg:col-span-8 display uppercase text-[clamp(3rem,9vw,9rem)]">
+        <h2 className="lg:col-span-8 display uppercase text-[clamp(2.4rem,11vw,9rem)] md:text-[clamp(3rem,9vw,9rem)]">
           Interior
           <br />
           Alchemist

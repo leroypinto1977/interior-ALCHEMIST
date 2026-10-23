@@ -17,10 +17,10 @@ export default function BookConsultationPage() {
   return (
     <main className="min-h-screen bg-sand text-ink flex flex-col">
       <header className="flex items-center justify-between h-16 px-5 md:px-10 border-b border-ink/20">
-        <Link href="/" aria-label="Interior Alchemist home">
+        <Link href="/" aria-label="Interior Alchemist home" className="py-1.5">
           <Logo variant="wordmark" className="h-8 w-auto" />
         </Link>
-        <Link href="/" className="eyebrow hover:underline underline-offset-4">
+        <Link href="/" className="eyebrow -mr-3 px-3 py-3.5 hover:underline underline-offset-4">
           ← Back home
         </Link>
       </header>

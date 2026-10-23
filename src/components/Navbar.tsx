@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-cream text-ink">
       <div className="flex items-center justify-between h-16 px-5 md:px-10">
-        <Link href="/" onClick={() => setOpen(false)} aria-label="Interior Alchemist home">
+        <Link href="/" onClick={() => setOpen(false)} aria-label="Interior Alchemist home" className="py-1.5">
           <Logo variant="wordmark" className="h-8 w-auto" />
         </Link>
 
@@ -43,7 +43,7 @@ export default function Navbar() {
         </nav>
 
         <button
-          className="lg:hidden eyebrow"
+          className="lg:hidden eyebrow -mr-3 px-3 py-3.5"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label="Toggle menu"

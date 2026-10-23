@@ -17,6 +17,7 @@ import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Pin from "@/components/Pin";
 
 type Entry = {
   C: () => JSX.Element;
@@ -52,11 +53,11 @@ export default function Home() {
       <Navbar />
       {sections.map(({ C, lock, over }, i) => {
         if (lock) {
-          // ponytail: pins from md up only; on phones these sections are taller than the screen and would hide their lower half
+          // pins from md up only; on phones these sections are taller than the screen
           return (
-            <div key={i} className="md:sticky md:top-0">
+            <Pin key={i}>
               <C />
-            </div>
+            </Pin>
           );
         }
         if (over) {

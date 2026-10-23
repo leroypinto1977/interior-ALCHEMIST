@@ -35,7 +35,7 @@ export default function Team() {
 
         <Reveal delay={0.3}>
           <p className="eyebrow text-taupe mt-10">Founder & principal director</p>
-          <p className="mt-6 text-taupe leading-relaxed">
+          <p className="mt-6 text-taupe leading-relaxed max-w-2xl mx-auto">
             Deepak established Interior Alchemist with a single-minded vision: to craft bespoke, high-clarity spaces that merge architectural elegance with personal expression. Under his direction the studio turns design challenges into functional art, with an emphasis on sophisticated detail and timeless luxury.
           </p>
         </Reveal>
