@@ -12,14 +12,14 @@ const steps = [
 export default function Process() {
   return (
     <section className="relative isolate overflow-hidden bg-cream text-ink py-20 md:py-36 px-6 md:px-10" id="process">
-      <Shape kind="asterisk" className="right-[5%] top-12 w-[clamp(80px,8vw,120px)]" />
-      <Shape kind="leaf" className="-left-8 bottom-6 w-[clamp(140px,15vw,240px)] -rotate-12" />
+      <Shape kind="asterisk" className="right-[5%] top-12 w-[clamp(5rem,8*var(--vw),7.5rem)]" />
+      <Shape kind="leaf" className="-left-8 bottom-6 w-[clamp(8.75rem,15*var(--vw),15rem)] -rotate-12" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">Our process</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-[clamp(2.8rem,6.5vw,6rem)] mt-8 max-w-4xl">
+          <h2 className="headline text-[clamp(2.8rem,6.5*var(--vw),6rem)] mt-8 max-w-4xl">
             A <em>structured</em> process that keeps everything clear and <em>stress-free</em>
           </h2>
         </Reveal>

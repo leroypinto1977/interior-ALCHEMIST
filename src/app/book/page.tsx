@@ -37,7 +37,7 @@ export default function BookConsultationPage() {
               className="w-full max-w-2xl bg-cream text-ink p-8 md:p-14"
             >
               <p className="eyebrow text-taupe text-center">Consultation</p>
-              <h1 className="font-serif text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] text-ink text-center mt-5">
+              <h1 className="font-serif text-[clamp(2.4rem,5*var(--vw),4rem)] leading-[0.95] text-ink text-center mt-5">
                 Request a <em>private</em> consultation
               </h1>
               <p className="text-taupe text-center mt-5 max-w-md mx-auto leading-relaxed">
@@ -88,7 +88,7 @@ export default function BookConsultationPage() {
               className="w-full max-w-xl bg-cream text-ink p-10 md:p-14 text-center"
             >
               <p className="eyebrow text-taupe">Request received</p>
-              <h2 className="font-serif text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] text-ink mt-5">
+              <h2 className="font-serif text-[clamp(2.4rem,5*var(--vw),4rem)] leading-[0.95] text-ink mt-5">
                 Thank you, {form.name.split(" ")[0]}
               </h2>
               <dl className="mt-8 border-t border-b border-ink/20 divide-y divide-ink/20 text-left">

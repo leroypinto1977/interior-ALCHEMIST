@@ -13,14 +13,14 @@ const reasons = [
 export default function WhyUs() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="why-us">
-      <Shape kind="leaf" className="right-[5%] top-12 w-[clamp(120px,12vw,190px)] -scale-x-100" />
-      <Shape kind="hatching" className="right-[4%] bottom-10 w-[clamp(200px,24vw,360px)]" />
+      <Shape kind="leaf" className="right-[5%] top-12 w-[clamp(7.5rem,12*var(--vw),11.875rem)] -scale-x-100" />
+      <Shape kind="hatching" className="right-[4%] bottom-10 w-[clamp(12.5rem,24*var(--vw),22.5rem)]" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">Why us</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-ink text-[clamp(2.8rem,6.5vw,6rem)] mt-8 max-w-4xl">
+          <h2 className="headline text-ink text-[clamp(2.8rem,6.5*var(--vw),6rem)] mt-8 max-w-4xl">
             Why homeowners <em>trust</em> Interior Alchemist
           </h2>
         </Reveal>

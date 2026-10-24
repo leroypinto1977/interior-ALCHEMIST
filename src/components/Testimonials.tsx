@@ -29,8 +29,8 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="relative isolate overflow-hidden bg-oxblood text-cream py-20 md:py-36 px-6 md:px-10" id="testimonials">
-      <Shape kind="quarters" className="bg-cream/10 right-[5%] top-4 w-[clamp(70px,7vw,110px)]" />
-      <Shape kind="hatching" className="bg-cream/10 left-[4%] bottom-8 w-[clamp(180px,20vw,300px)]" />
+      <Shape kind="quarters" className="bg-cream/10 right-[5%] top-4 w-[clamp(4.375rem,7*var(--vw),6.875rem)]" />
+      <Shape kind="hatching" className="bg-cream/10 left-[4%] bottom-8 w-[clamp(11.25rem,20*var(--vw),18.75rem)]" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="flex items-center gap-6 eyebrow text-cream/70">

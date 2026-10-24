@@ -12,7 +12,7 @@ const benefits = [
 export default function Services() {
   return (
     <section className="relative isolate overflow-hidden bg-sand text-ink py-20 md:py-32 px-6 md:px-10" id="services">
-      <Shape kind="leaf" className="-left-6 bottom-6 w-[clamp(130px,14vw,220px)] -rotate-6" />
+      <Shape kind="leaf" className="-left-6 bottom-6 w-[clamp(8.125rem,14*var(--vw),13.75rem)] -rotate-6" />
       <ArcSeam half="bottom" side="right" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
@@ -27,7 +27,7 @@ export default function Services() {
           {benefits.map((b, i) => (
             <Reveal key={i} delay={i * 0.08}>
               <li className="group grid md:grid-cols-[1fr_auto] items-center gap-4 md:gap-12 py-8 md:py-10 border-b border-ink/20">
-                <h3 className="headline text-[clamp(2.4rem,6vw,5.5rem)] group-hover:translate-x-3 transition-transform duration-500 ease-out">
+                <h3 className="headline text-[clamp(2.4rem,6*var(--vw),5.5rem)] group-hover:translate-x-3 transition-transform duration-500 ease-out">
                   {b.title}
                 </h3>
                 <p className="md:max-w-xs md:text-right text-taupe leading-relaxed">{b.text}</p>

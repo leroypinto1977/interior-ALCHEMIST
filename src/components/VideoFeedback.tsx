@@ -34,13 +34,13 @@ export default function VideoFeedback() {
 
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="video-feedbacks">
-      <Shape kind="leaf" className="-right-6 top-16 w-[clamp(130px,14vw,220px)] rotate-6" />
+      <Shape kind="leaf" className="-right-6 top-16 w-[clamp(8.125rem,14*var(--vw),13.75rem)] rotate-6" />
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">Video reviews</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-ink text-[clamp(2.8rem,6.5vw,6rem)] mt-8 max-w-3xl">
+          <h2 className="headline text-ink text-[clamp(2.8rem,6.5*var(--vw),6rem)] mt-8 max-w-3xl">
             Hear it in <em>their</em> own words
           </h2>
         </Reveal>
@@ -52,7 +52,7 @@ export default function VideoFeedback() {
             <Reveal key={f.name} delay={i * 0.1}>
               <Card
                 {...(f.videoUrl && { onClick: () => setActive(f), "aria-label": `Play video review from ${f.name}` })}
-                className={`polaroid ${tilt[i]} w-full max-w-[340px] mx-auto block text-left group hover:rotate-0 transition-transform duration-500`}
+                className={`polaroid ${tilt[i]} w-full max-w-[21.25rem] mx-auto block text-left group hover:rotate-0 transition-transform duration-500`}
               >
                 <span className="relative block aspect-[4/5] overflow-hidden">
                   <Image src={f.thumbnail} alt="" fill sizes="340px" className="photo" />

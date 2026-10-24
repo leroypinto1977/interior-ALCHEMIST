@@ -13,13 +13,13 @@ const rows = [
 export default function Differentiation() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="differentiation">
-      <Shape kind="hatching" className="right-[4%] top-10 w-[clamp(180px,20vw,300px)]" />
+      <Shape kind="hatching" className="right-[4%] top-10 w-[clamp(11.25rem,20*var(--vw),18.75rem)]" />
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <p className="eyebrow text-taupe">The difference</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-ink text-[clamp(2.8rem,6.5vw,6rem)] mt-8">
+          <h2 className="headline text-ink text-[clamp(2.8rem,6.5*var(--vw),6rem)] mt-8">
             The difference is <em>felt</em> immediately
           </h2>
         </Reveal>

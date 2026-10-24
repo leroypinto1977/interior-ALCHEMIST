@@ -28,11 +28,11 @@ export default function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-cream text-ink min-h-screen flex flex-col pt-16">
-      <Shape kind="leaf" className="-right-10 top-20 w-[clamp(180px,22vw,340px)]" />
-      <Shape kind="pinwheel" className="left-[5%] bottom-24 w-[clamp(90px,10vw,150px)]" />
+      <Shape kind="leaf" className="-right-10 top-20 w-[clamp(11.25rem,22*var(--vw),21.25rem)]" />
+      <Shape kind="pinwheel" className="left-[5%] bottom-24 w-[clamp(5.625rem,10*var(--vw),9.375rem)]" />
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 pt-12 pb-10 text-center">
-        <h1 className="display uppercase text-[clamp(2.6rem,13.5vw,12rem)]">
+        <h1 className="display uppercase text-[clamp(2.6rem,13.5*var(--vw),12rem)]">
           <span className="block overflow-hidden">
             <motion.span className="block" {...rise(0)}>
               Interior
@@ -47,7 +47,7 @@ export default function Hero() {
 
         {/* Pile of polaroids tucked under the wordmark; a new one lands every few seconds */}
         <PhotoStack
-          className="-mt-6 md:-mt-10 w-[clamp(120px,15vw,220px)]"
+          className="-mt-6 md:-mt-10 w-[clamp(7.5rem,15*var(--vw),13.75rem)]"
           delay={(delay ?? 0) + 0.7}
         />
 

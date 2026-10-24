@@ -14,7 +14,7 @@ const points = [
 export default function Trust() {
   return (
     <section className="relative isolate overflow-hidden bg-sand py-20 md:py-36 px-6 md:px-10" id="trust">
-      <Shape kind="waves" className="-right-6 -top-10 w-[clamp(150px,15vw,230px)]" />
+      <Shape kind="waves" className="-right-6 -top-10 w-[clamp(9.375rem,15*var(--vw),14.375rem)]" />
       <ArcSeam half="top" side="left" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
         <div className="lg:col-span-6">
@@ -22,7 +22,7 @@ export default function Trust() {
             <p className="eyebrow text-taupe">Clarity & care</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="headline text-ink text-[clamp(2.8rem,6vw,5.5rem)] mt-8">
+            <h2 className="headline text-ink text-[clamp(2.8rem,6*var(--vw),5.5rem)] mt-8">
               A premium experience built around <em>clarity</em> and accountability
             </h2>
           </Reveal>

@@ -34,14 +34,14 @@ const projects = [
 export default function Projects() {
   return (
     <section className="relative isolate overflow-hidden bg-sand py-20 md:py-36 px-6 md:px-10" id="portfolio">
-      <Shape kind="pinwheel" className="left-[3%] bottom-10 w-[clamp(90px,9vw,140px)]" />
+      <Shape kind="pinwheel" className="left-[3%] bottom-10 w-[clamp(5.625rem,9*var(--vw),8.75rem)]" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-7">
           <Reveal>
             <p className="eyebrow text-taupe">Our portfolio</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="headline text-ink text-[clamp(2.8rem,6.5vw,6rem)] mt-8">
+            <h2 className="headline text-ink text-[clamp(2.8rem,6.5*var(--vw),6rem)] mt-8">
               Homes that <em>feel</em> as good as they <em>look</em>
             </h2>
           </Reveal>
@@ -76,7 +76,7 @@ export default function Projects() {
 
         {/* Film-strip frame, as on the reference's portfolio block */}
         <Reveal className="lg:col-span-5 flex lg:justify-end" delay={0.15}>
-          <div className="w-[260px] md:w-[300px] border border-ink/60 bg-cream p-2.5 space-y-2.5 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.5)]">
+          <div className="w-[16.25rem] md:w-[18.75rem] border border-ink/60 bg-cream p-2.5 space-y-2.5 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.5)]">
             {projects.map((p) => (
               <div key={p.image} className="group relative aspect-[4/5] overflow-hidden">
                 <Image src={p.image} alt={p.alt} fill sizes="300px" className="photo" />

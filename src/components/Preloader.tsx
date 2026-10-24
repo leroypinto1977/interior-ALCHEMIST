@@ -43,7 +43,7 @@ export default function Preloader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease, delay: 0.15 }}
           >
-            <Logo variant="full" className="bg-cream w-[clamp(140px,28vw,260px)]" />
+            <Logo variant="full" className="bg-cream w-[clamp(8.75rem,28*var(--vw),16.25rem)]" />
           </motion.div>
           <motion.span
             className="mt-10 h-px w-40 bg-cream origin-left"

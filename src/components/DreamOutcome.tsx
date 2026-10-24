@@ -14,11 +14,11 @@ const outcomes = [
 export default function DreamOutcome() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="vision">
-      <Shape kind="hatch-circle" className="left-[3%] top-10 w-[clamp(90px,9vw,140px)]" />
+      <Shape kind="hatch-circle" className="left-[3%] top-10 w-[clamp(5.625rem,9*var(--vw),8.75rem)]" />
       <ArcSeam half="top" side="right" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <Reveal className="lg:col-span-5 flex justify-center">
-          <figure className="polaroid -rotate-3 w-[300px] sm:w-[360px] group">
+          <figure className="polaroid -rotate-3 w-[18.75rem] sm:w-[22.5rem] group">
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src="/work/dining-cane.webp"
@@ -39,7 +39,7 @@ export default function DreamOutcome() {
             <p className="eyebrow text-taupe">The outcome</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="headline text-ink text-[clamp(2.8rem,6vw,5.5rem)] mt-8">
+            <h2 className="headline text-ink text-[clamp(2.8rem,6*var(--vw),5.5rem)] mt-8">
               A home that <em>feels</em> beautiful to experience <em>every</em> single day
             </h2>
           </Reveal>

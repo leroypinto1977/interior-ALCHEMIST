@@ -17,9 +17,9 @@ export default function ShowcaseGrid() {
   const word = Array(4).fill("The lifestyle").join("    ");
   return (
     <section className="relative isolate overflow-hidden bg-sand pt-6 pb-14 md:pb-20">
-      <Shape kind="asterisk" className="right-[3%] bottom-4 w-[clamp(80px,8vw,120px)]" />
+      <Shape kind="asterisk" className="right-[3%] bottom-4 w-[clamp(5rem,8*var(--vw),7.5rem)]" />
 
-      <div aria-hidden className="flex whitespace-nowrap display uppercase text-[clamp(3.6rem,10vw,9rem)] text-ink select-none">
+      <div aria-hidden className="flex whitespace-nowrap display uppercase text-[clamp(3.6rem,10*var(--vw),9rem)] text-ink select-none">
         <span className="animate-marquee-left pr-8">{word}&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span className="animate-marquee-left pr-8">{word}&nbsp;&nbsp;&nbsp;&nbsp;</span>
       </div>
@@ -28,7 +28,7 @@ export default function ShowcaseGrid() {
       <div className="relative mt-3 flex gap-3 md:gap-4 px-6 overflow-x-auto md:overflow-visible md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {images.map((img, i) => (
           <Reveal key={img.src} delay={i * 0.08} className={`shrink-0 ${i % 2 ? "md:-mt-5" : "md:mt-5"}`}>
-            <div className="group relative w-[170px] md:w-[150px] lg:w-[190px] aspect-[3/4] overflow-hidden">
+            <div className="group relative w-[10.625rem] md:w-[9.375rem] lg:w-[11.875rem] aspect-[3/4] overflow-hidden">
               <Image src={img.src} alt={img.alt} fill sizes="220px" className="photo" />
             </div>
           </Reveal>

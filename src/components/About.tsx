@@ -20,14 +20,14 @@ const trust = [
 export default function About() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6" id="about">
-      <Shape kind="quarters" className="right-[4%] bottom-16 w-[clamp(90px,9vw,140px)]" />
+      <Shape kind="quarters" className="right-[4%] bottom-16 w-[clamp(5.625rem,9*var(--vw),8.75rem)]" />
       <ArcSeam half="bottom" side="left" />
       <div className="max-w-5xl mx-auto text-center">
         <Reveal>
           <p className="eyebrow text-taupe">About Interior Alchemist</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="headline text-ink text-[clamp(2.6rem,6.5vw,5.5rem)] mt-8">
+          <h2 className="headline text-ink text-[clamp(2.6rem,6.5*var(--vw),5.5rem)] mt-8">
             We design <em>emotionally</em> refined homes for people who want <em>more</em> than ordinary interiors — and we <em>build</em> them too
           </h2>
         </Reveal>

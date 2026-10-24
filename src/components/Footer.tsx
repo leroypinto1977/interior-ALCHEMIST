@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
 
       <div className="px-6 md:px-10 pt-10 pb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-        <h2 className="lg:col-span-8 display uppercase text-[clamp(2.4rem,11vw,9rem)] md:text-[clamp(3rem,9vw,9rem)]">
+        <h2 className="lg:col-span-8 display uppercase text-[clamp(2.4rem,11*var(--vw),9rem)] md:text-[clamp(3rem,9*var(--vw),9rem)]">
           Interior
           <br />
           Alchemist

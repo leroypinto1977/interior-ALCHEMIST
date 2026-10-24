@@ -11,7 +11,7 @@ export default function ArcSeam({ half, side }: { half: "top" | "bottom"; side: 
       aria-hidden
       viewBox={half === "top" ? "-100 -100 200 100" : "-100 0 200 100"}
       className={cn(
-        "pointer-events-none absolute -z-10 aspect-[2/1] w-[clamp(300px,40vw,620px)] text-taupe/25",
+        "pointer-events-none absolute -z-10 aspect-[2/1] w-[clamp(18.75rem,40*var(--vw),38.75rem)] text-taupe/25",
         half === "top" ? "bottom-0" : "top-0",
         side === "left" ? "-left-[14%]" : "-right-[14%]"
       )}

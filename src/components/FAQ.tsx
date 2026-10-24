@@ -31,14 +31,14 @@ const faqs = [
 export default function FAQ() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-36 px-6 md:px-10" id="faq">
-      <Shape kind="hatch-circle" className="right-[4%] bottom-10 w-[clamp(90px,9vw,140px)]" />
+      <Shape kind="hatch-circle" className="right-[4%] bottom-10 w-[clamp(5.625rem,9*var(--vw),8.75rem)]" />
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4 border-l border-ink/40 pl-5">
           <Reveal>
             <p className="eyebrow text-taupe">FAQ</p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="headline text-ink text-[clamp(2.8rem,6vw,5rem)] mt-8">
+            <h2 className="headline text-ink text-[clamp(2.8rem,6*var(--vw),5rem)] mt-8">
               Frequently <em>asked</em> questions
             </h2>
           </Reveal>
