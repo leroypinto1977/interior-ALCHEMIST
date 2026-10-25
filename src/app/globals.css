@@ -21,7 +21,7 @@
     @apply border-border;
   }
   /* Site scale. Every size is in rem or `--vw`, so these two values scale the whole site.
-     Tablets and up render at 90%; phones stay at 100% so body text and form fields stay readable. */
+     Phones stay at 100% so body text and form fields stay readable; tablets render at 90%. */
   html {
     scroll-behavior: smooth;
     font-size: 100%;
@@ -31,6 +31,14 @@
     html {
       font-size: 90%;
       --vw: 0.9vw;
+    }
+  }
+  /* Laptops and desktops: 90% on a 1440x900 screen, shrinking in proportion on smaller or shorter
+     ones (e.g. a 1920x1080 laptop at 150% display scaling is a 1280x720 screen), never under 12px. */
+  @media (min-width: 1024px) {
+    html {
+      font-size: clamp(12px, min(1vw, 1.6vh), 14.4px);
+      --vw: min(0.9vw, 1.44vh);
     }
   }
   body {
@@ -46,7 +54,7 @@
 
 @layer components {
   .eyebrow {
-    @apply font-mono text-[0.75rem] md:text-[0.6875rem] uppercase tracking-[0.22em];
+    @apply font-mono text-[0.75rem] md:text-[max(0.6875rem,10px)] uppercase tracking-[0.22em];
   }
   /* Condensed uppercase headline with italic serif accent words, e.g. WORK THAT <em>Speaks</em> */
   .headline {
@@ -61,7 +69,7 @@
     @apply font-display font-extrabold tracking-[-0.03em] leading-[0.9];
   }
   .btn {
-    @apply inline-flex items-center justify-center gap-3 font-mono text-[0.75rem] md:text-[0.6875rem] uppercase tracking-[0.22em] px-7 py-4 border transition-colors duration-300;
+    @apply inline-flex items-center justify-center gap-3 font-mono text-[0.75rem] md:text-[max(0.6875rem,10px)] uppercase tracking-[0.22em] px-7 py-4 border transition-colors duration-300;
   }
   .btn-ink {
     @apply bg-ink text-cream border-ink hover:bg-transparent hover:text-ink;
